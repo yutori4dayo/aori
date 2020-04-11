@@ -590,6 +590,39 @@ dt::before{
   }
 }
 
+@media (max-width: 393px){
+
+  .Region1{
+    left: 31px;
+  }
+
+  .Classification1{
+    left: 75px;
+    font-size: 15px;
+    top: 7px;
+  }
+
+  .Distinction1{
+    left: 5px;
+    font-size: 15px;
+  }
+
+  .Mainnumber1{
+    font-size: 32px;
+    top: 23px;
+    left: 25px;
+  }
+
+  .box{
+    height: 74px;
+    width: 134px;
+  }
+
+  .noimage{
+    width: 135px;
+  }
+}
+
 @media (min-width: 992px){
   .container{
       max-width: 1164px;
