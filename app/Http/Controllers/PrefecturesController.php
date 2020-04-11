@@ -342,7 +342,7 @@ class PrefecturesController extends Controller
    $prefectures = Prefectures::all();
    return view('allsearch',compact('prefectures'));
  }
-
+// a
  public function allsearchs(Request $request){
    if(isset($request->Mainnumber)){
      if(strlen($request->Mainnumber) === 3){
@@ -350,24 +350,28 @@ class PrefecturesController extends Controller
         $Cardatass = '• '.$tests;
          $Cardata =  Post::where('Mainnumber',$Cardatass)->orderBy('created_at','desc')->get();
          $prefectures = Prefectures::all();
-          return view('allsearch',compact('Cardata','prefectures'));
+         $count = count($Cardata);
+          return view('allsearch',compact('Cardata','prefectures','count'));
      }elseif(strlen($request->Mainnumber) === 2){
        $tests = substr_replace($request->Mainnumber,' ',-2,0);
         $Cardatass = '• '.'•  '.$tests;
         $Cardata =  Post::where('Mainnumber',$Cardatass)->orderBy('created_at','desc')->get();
         $prefectures = Prefectures::all();
-         return view('allsearch',compact('Cardata','prefectures'));
+        $count = count($Cardata);
+         return view('allsearch',compact('Cardata','prefectures','count'));
      }elseif(strlen($request->Mainnumber) === 1){
        $tests = substr_replace($request->Mainnumber,' ',-3,0);
        $Cardatass = '• '.'• '.' •'.$tests;
         $Cardata =  Post::where('Mainnumber',$Cardatass)->orderBy('created_at','desc')->get();
         $prefectures = Prefectures::all();
-         return view('allsearch',compact('Cardata','prefectures'));
+        $count = count($Cardata);
+         return view('allsearch',compact('Cardata','prefectures','count'));
      }else {
        $Cardatass = substr_replace($request->Mainnumber,'-',2,0);
         $Cardata =  Post::where('Mainnumber',$Cardatass)->orderBy('created_at','desc')->get();
         $prefectures = Prefectures::all();
-         return view('allsearch',compact('Cardata','prefectures'));
+        $count = count($Cardata);
+         return view('allsearch',compact('Cardata','prefectures','count'));
      }
    }
    $Cardata =  Post::where('Color',$request->Color)

@@ -14,7 +14,7 @@ class AddCarImgToPostsTable extends Migration
     public function up()
     {
         Schema::table('posts', function (Blueprint $table) {
-            $table->string('car_img');
+            $table->string('car_img')->nullable();
         });
     }
 
