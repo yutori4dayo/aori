@@ -1,0 +1,597 @@
+body{
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: gray;
+  box-sizing: border-box;
+}
+
+.SiteDescription{
+  background-color: snow;
+}
+
+.form{
+  width: 1200px;
+}
+
+.alert-light{
+  margin-left:27px;
+}
+
+/* .col-sm-12{
+  padding-left: 25px;
+} */
+
+ul{
+  padding-left: 10px;
+}
+
+li{
+  list-style: none;
+  padding-right: 20px;
+}
+.HeaderWrap{
+  width: 1200px;
+}
+.TitleBox{
+  padding-left: 40px;
+  margin: 0 auto;
+}
+.NavItem{
+  padding-left: 25px;
+}
+
+.NavItemList{
+  border: 1px solid #555;
+}
+
+.defaultWrap {
+    min-width: 320px;
+    max-width: 1120px;
+    text-align: left;
+    margin: 0 auto;
+}
+
+#globalNavUl li {
+    text-align: center;
+    width: 20%;
+    float: left;
+}
+
+h1{
+  margin: 5px;
+}
+
+.NavItem{
+  margin: 0;
+}
+
+.NavItemList{
+  padding: 15px;
+  font-size: 25px;
+  margin: 0 auto;
+}
+
+.plate{
+  padding: 0!important;
+}
+
+.SectionTitlebox {
+  color: black;
+  border-left: solid 10px red;
+  padding-left: 10px;
+  background-color: snow;
+  font-size: 20px;
+  border-bottom: 2px solid #555;
+  margin-bottom: 0;
+}
+
+.SectionTitle{
+  margin-top: 5px;
+  font-size: 20px!important;
+}
+
+time{
+  color: black;
+  margin-right: 10px;
+}
+
+.sp_box{
+  display: flex;
+}
+
+.SiteDescription{
+  word-wrap: break-word;
+}
+
+.Section_box{
+  border: 1px solid snow;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
+}
+
+.PrefecturesWrapper{
+  display: flex;
+}
+.PrefecturesWrapper dd{
+  padding-left: 20px;
+}
+
+.PrefecturesList{
+  padding: 10px;
+  background-color: snow;
+}
+
+.right_p{
+  padding-left: 0px;
+}
+
+.right_p2{
+  padding-left: 15px;
+}
+
+.brand_type{
+  margin-bottom: 0;
+}
+
+.imagebox{
+  /* display: inline-block; */
+  position: relative;
+  z-index: 1;
+}
+
+.Region{
+  position: absolute;
+  top: 78px;
+  left: 70px;
+  z-index: 2;
+  font-size: 22px;
+}
+
+.Classification{
+  position: absolute;
+  top: 75px;
+  left: 123px;
+  z-index: 2;
+  font-size: 25px;
+}
+
+.Distinction{
+  position: absolute;
+  top: 116px;
+  left: 34px;
+  z-index: 2;
+  font-size: 25px;
+}
+
+.Mainnumber{
+  position: absolute;
+  top: 97px;
+  left: 67px;
+  z-index: 2;
+  font-size: 48px;
+}
+
+.ChangeSize{
+  font-size: 10px;
+  position: relative;
+  top: -2px;
+}
+
+
+.imagebox .image{
+  max-width: 200px;
+}
+
+.noimage{
+  height: 108;
+  width: 200;
+}
+
+.box{
+  position: relative;
+  width: 200px;
+  height: 100px;
+  border: 2px solid #ccc;
+  border-radius: 2px;
+  box-shadow: 2px 2px 1px 1px;
+  background: #fff;
+}
+
+.Region1{
+  position: absolute;
+  top: 2px;
+  left: 50px;
+  z-index: 2;
+  font-size: 22px;
+}
+
+.strlen{
+    left: 37px!important;
+}
+
+.strlenover{
+  left: 10px!important;
+}
+
+.Classification1{
+  position: absolute;
+  top: -1px;
+  left: 105px;
+  z-index: 2;
+  font-size: 25px;
+}
+
+.Distinction1{
+  position: absolute;
+  top: 42px;
+  left: 12px;
+  z-index: 2;
+  font-size: 25px;
+}
+
+.Mainnumber1{
+  position: absolute;
+  top: 25px;
+  left: 45px;
+  z-index: 2;
+  font-size: 48px;
+}
+
+.latestPostData{
+  padding-top: 15px;
+  display: flex;
+  background-color: snow;
+}
+
+.Section_box{
+  margin-bottom: 15px;
+}
+
+.text_area{
+  max-width: 474px;
+}
+
+.pic_text_box_list{
+  display: flex;
+  margin-bottom: 0px;
+  padding-left: 9px;
+}
+
+.header_list{
+  word-break: break-all;
+  width: 200px;
+}
+
+th,td{
+  border: 1px solid #555;
+  padding: 1px 10px;
+}
+
+.header_table{
+  margin-top: 15px;
+}
+
+//ranking
+
+.RankingTab{
+  display: none!important;
+}
+
+.RankingContents{
+  margin-right: 15px;
+}
+
+.ranking{
+  display: flex;
+}
+
+.RankingBoxRap{
+  display: flex;
+}
+
+.RankingContents{
+  font-size: 35px;
+  margin-right: 50px;
+}
+.RankingList{
+  padding-right: 0px!important;
+  padding: 10px 0;
+}
+.top3{
+  width: 100px;
+  height: 60px;
+  position: relative;
+  top: -2px;
+}
+.under{
+  padding: 0 21px;
+  position: relative;
+  top: 2px;
+}
+
+.RankingCount{
+  font-size: 15px;
+}
+.PreCountBox{
+  font-size: 23px;
+}
+.spbox{
+ display: flex;
+}
+/* .col-12{
+  padding-left: 18px!important;
+  padding-right: 18px!important;
+}
+.col-lg-8{
+  padding-left: 25px!important;
+  padding-right: 25px!important;
+} */
+.image{
+  width: 200px;
+  height: 110px;
+  padding-bottom: 5px;
+}
+.Textlist{
+  padding-right: 8px;
+}
+
+.defaultWrap{
+  padding-top: 15px;
+  padding-bottom: 10px;
+  padding-left: 0;
+}
+
+.defaultWrap a{
+  color: #555;
+}
+i {
+  font-size: 25px;
+  color: black;
+}
+
+.headNav{
+  border-right: 1px solid #ddd;
+  padding-right: 0;
+  padding: 15px 0;
+  background-color: snow
+}
+
+.headNav0{
+  padding: 15px 0;
+  background-color: snow
+}
+
+
+dt::before{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  content: "\f105";
+  margin-right: 10px;
+  color: red!important;
+}
+.sp_hidden{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  content: "\f105";
+  margin-right: 10px;
+  color: red!important;
+}
+
+/* title */
+.place_title{
+  padding-left: 30px;
+}
+
+.tab-pane{
+  background-color: snow!important;
+  padding: 15px;
+}
+
+.modal-footer{
+  border-top: none!important;
+}
+
+.PostImage{
+  width: 500px;
+}
+
+/* .PostSpan{
+  color: orange;
+} */
+.PostSupplement{
+  padding-bottom: 5px;
+}
+
+.short{
+  padding-right: 64px;
+}
+.short2{
+  padding-right: 15px;
+}
+
+
+@media screen and (max-width:1200px) {
+/* .container{
+  padding-left: 0!important;
+  padding-right: 0!important;
+} */
+.right_p{
+  padding-left: 5px;
+}
+.PostImage{
+  width: 300px;
+}
+.sp_hidden a{
+  font-size: 15px!important;
+}
+
+.SizeChange{
+  font-size: 15px!important;
+}
+}
+
+@media screen and (max-width:1098px) {
+  .text_area {
+    font-size: 15px;
+}
+.pic_text_box_list{
+  display: flex;
+}
+.PrefecturesWrapper dd{
+  padding-left: 19px;
+  font-size: 23px;
+}
+.sp_hidden a{
+  font-size: 12px!important;
+}
+.SizeChange{
+  font-size: 15px!important;
+}
+}
+
+@media screen and (max-width:990px) {
+  .sp_hidden{
+    display: none;
+  }
+  .latestPostData{
+    display: block;
+  }
+  .PrefecturesWrapper{
+    border-bottom: 1px solid #555;
+  }
+  dt{
+    font-size: 20px;
+    color: #007bff;
+  }
+  dd{
+    border-bottom: 1px solid #555;
+    padding: 5px 0;
+  }
+  .modal-body{
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767px){
+  .Prefectures{
+    font-size: 10px;
+  }
+  .sp_hidden{
+    display: none;
+  }
+  .latestPostData{
+    display: block;
+  }
+  h1{
+    font-size: 20px;
+  }
+  .TitleBox{
+    padding-left: 10px;
+    padding-top: 15px;
+  }
+  .headNav{
+    padding: 10px 0;
+  }
+  .headNav0{
+    padding: 10px 0;
+  }
+  .header_list{
+    width: 184px;
+    font-size: 12px;
+  }
+  .noimage{
+    width: 169px;
+    height: 80px;
+    padding-bottom: 5px;
+  }
+  .box{
+    position: relative;
+    width: 167px;
+    height: 80px;
+    border: 2px solid #ccc;
+    border-radius: 2px;
+    box-shadow: 2px 2px 1px 1px;
+  }
+  .Region1{
+    position: absolute;
+    top: 6px;
+    left: 47px;
+    z-index: 2;
+    font-size: 16px;
+  }
+  .Classification1{
+    position: absolute;
+    top: 4px;
+    left: 92px;
+    z-index: 2;
+    font-size: 20px;
+  }
+  .Distinction1{
+    position: absolute;
+    top: 35px;
+    left: 12px;
+    z-index: 2;
+    font-size: 22px;
+  }
+  .Mainnumber1{
+    position: absolute;
+    top: 20px;
+    left: 39px;
+    z-index: 2;
+    font-size: 38px;
+  }
+  .text_area{
+    font-size: 10px;
+    padding-right: 8px;
+  }
+  .Textlist{
+    padding-right: 8px;
+  }
+  .SectionTitle{
+    font-size: 18px!important;
+    position: relative;
+    top: 3px;
+  }
+  time{
+    font-size: 15px;
+  }
+  .SectionTitleBox{
+    align-items: center;
+  }
+  .Navtitle{
+    font-size: 12px;
+  }
+  .image{
+    width: 169px;
+    height: 80px;
+  }
+  /* PostBtn */
+  .PostBtn{
+    font-size: 15px;
+  }
+
+  /* serchcardata */
+  .serch_title{
+    font-size: 15px;
+  }
+  .modal-body{
+    font-size: 12px!important;
+    padding: 5px!important;
+  }
+
+  .strlenover {
+      left: 20px!important;
+  }
+  .Classification1 {
+      left: 88px;
+  }
+  .check{
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 992px){
+  .container{
+      max-width: 1164px;
+  }
+}

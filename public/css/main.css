@@ -1,0 +1,172 @@
+li{
+  list-style: none;
+}
+
+ul{
+  margin-bottom: 0;
+}
+
+.content-wrapper{
+  margin-left: 120px!important;
+}
+
+.home{
+  padding: 6rem 2rem!important;
+  background-image: url("../img/hero1.jpg");
+  background-size:  cover;
+  background-repeat:  no-repeat;
+  background-position:center;
+}
+
+.hero{
+  max-width: 600px;
+  margin-right;
+  border-radius: 15px;
+  background-color:rgba(221,221,221,0.9)!important;
+}
+
+.content-header{
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.Car_info_ul{
+  display: flex;
+  /* position: relative;
+  top: 6px; */
+}
+
+.Car_Region,.Car_Classification,.Car_Distinction,.Car_Mainnumber{
+  margin-right: 5px;
+}
+
+.header_car_info{
+  align-items: center;
+  vertical-align: middle;
+}
+
+.create_at{
+  margin-left: auto;
+}
+
+
+.text_body{
+  padding-left: 40px;
+  word-wrap: break-word;
+  white-space: pre-line;
+}
+
+.ContentBox{
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* news */
+.news_contentsection{
+  height: 150px;
+  overflow: scroll;
+}
+
+.news_topic li{
+  padding: 5px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+
+/* detail */
+.detail{
+  max-width: 100vh;
+  height: 50vh;
+  background-image: url("../img/number.png");
+  background-size:  cover;
+  background-repeat:  no-repeat;
+  background-position:center;
+  padding: 6rem 2rem!important;
+  position: relative;
+}
+
+
+.FormBox{
+  max-width: 600px;
+}
+
+th,td{
+  border: 1px solid #555;
+  padding: 1px 10px;
+}
+
+.header_table{
+  margin-top: 15px;
+}
+
+
+.badge-primary{
+  background-color: red;
+}
+
+
+
+/*---Media Queries --*/
+@media (max-width: 500px) {
+  h1{
+    font-size: 23px;
+    font-weight: bold;
+  }
+  .hero{
+    background-color: #fff!important;
+  }
+  .hero p{
+    font-size: 14px;
+  }
+  .home{
+    margin-bottom: 0;
+    background: none;
+  }
+  .jumbotron{
+    padding: 3rem 2rem!important;
+  }
+  .breadcrumb{
+     margin-top: 20px;
+  }
+  .Car_info_ul,.create_at{
+    padding-left: 0;
+  }
+  .create_at{
+    font-size: 12px;
+  }
+  .Car_Detail_ButtonBox{
+    margin-left: 5px!important;
+  }
+
+  .content-wrapper{
+    margin-left: 0px!important;
+  }
+
+  .content{
+    padding: 0!important;
+  }
+
+  .text_body{
+    padding-left: 0px;
+    word-wrap: break-word;
+  }
+
+  .header_post,.body_post{
+    display: flex;
+  }
+
+  .region_post{
+    margin-right: 40px;
+  }
+
+  .float-sm-right{
+    padding-left: 0;
+  }
+
+  /* news */
+  .news_topic{
+    padding-left: 0;
+  }
+}

@@ -1,0 +1,249 @@
+@include('layouts.head')
+<body>
+@include('layouts.nav')
+<ul id="myTab" class="nav nav-tabs RankingTab" role="tablist">
+  <li class="nav-item">
+    <a href="#home" id="home-tab" class="nav-link active" role="tab" data-toggle="tab" aria-controls="home" aria-selected="true">場所</a>
+  </li>
+  <li class="nav-item">
+    <a href="#profile" id="profile-tab" class="nav-link" role="tab" data-toggle="tab" aria-controls="profile" aria-selected="false">ブランド</a>
+  </li>
+  <li class="nav-item">
+    <a href="#contact" id="contact-tab" class="nav-link" role="tab" data-toggle="tab" aria-controls="contact" aria-selected="false">ボディタイプ</a>
+  </li>
+</ul>
+
+
+<!-- パネル部分 -->
+<div id="myTabContent" class="tab-content">
+  <div id="home" class="tab-pane active" role="tabpanel" aria-labelledby="home-tab">
+    <ul>
+      <li class="d-flex RankingList"><img src="{{  asset('img/f3-1.png') }}" alt="" class="top3">　
+        <div class="PreCountBox">
+          {{$place[0]}}　
+          <div class="RankingCount">
+            {{$placecount[0]}}件
+          </div>
+        </div>
+      </li>
+      <li class="d-flex RankingList"><img src="{{  asset('img/f3-2.png') }}" alt="" class="top3">　
+        <div class="PreCountBox">
+          {{$place[1]}}　
+          <div class="RankingCount">
+            {{$placecount[1]}}件
+          </div>
+        </div>
+      </li>
+      <li class="d-flex RankingList"><img src="{{  asset('img/f3-3.png') }}" alt="" class="top3">　
+        <div class="PreCountBox">
+          {{$place[2]}}　
+          <div class="RankingCount">
+            {{$placecount[2]}}件
+          </div>
+        </div>
+      </li>
+      <li class="d-flex RankingList"><span class="under">4位</span>　
+        <div class="PreCountBox">
+          {{$place[3]}}　
+          <div class="RankingCount">
+            {{$placecount[3]}}件
+          </div>
+        </div>
+      </li>
+      <li class="d-flex RankingList"><span class="under">5位</span>　
+        <div class="PreCountBox">
+          {{$place[4]}}　
+          <div class="RankingCount">
+            {{$placecount[4]}}件
+          </div>
+        </div>
+      </li>
+      <li class="d-flex RankingList"><span class="under">6位</span>　
+        <div class="PreCountBox">
+          {{$place[5]}}　
+          <div class="RankingCount">
+            {{$placecount[5]}}件
+          </div>
+        </div>
+      </li>
+      <li class="d-flex RankingList"><span class="under">7位</span>　
+        <div class="PreCountBox">
+          {{$place[6]}}　
+          <div class="RankingCount">
+            {{$placecount[6]}}件
+          </div>
+        </div>
+      </li>
+      <li class="d-flex RankingList"><span class="under">8位</span>　
+        <div class="PreCountBox">
+          {{$place[7]}}　
+          <div class="RankingCount">
+            {{$placecount[7]}}件
+          </div>
+        </div>
+      </li>
+      <li class="d-flex RankingList"><span class="under">9位</span>　
+        <div class="PreCountBox">
+          {{$place[8]}}　
+          <div class="RankingCount">
+            {{$placecount[8]}}件
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="profile" class="tab-pane" role="tabpanel" aria-labelledby="profile-tab">
+    <ul>
+      <li class="d-flex RankingList"><img src="{{  asset('img/f3-1.png') }}" alt="" class="top3">　
+        <div class="PreCountBox">
+          {{$brand[0]}}　
+          <div class="RankingCount">
+            {{$brandcount[0]}}件
+          </div>
+        </div>
+      </li>
+      <li class="d-flex RankingList"><img src="{{  asset('img/f3-2.png') }}" alt="" class="top3">　
+        <div class="PreCountBox">
+          {{$brand[1]}}　
+          <div class="RankingCount">
+            {{$brandcount[1]}}件
+          </div>
+        </div>
+      </li>
+      <li class="d-flex RankingList"><img src="{{  asset('img/f3-3.png') }}" alt="" class="top3">　
+        <div class="PreCountBox">
+          {{$brand[2]}}　
+          <div class="RankingCount">
+            {{$brandcount[2]}}件
+          </div>
+        </div>
+      </li>
+      <li class="d-flex RankingList"><span class="under">4位</span>　
+        <div class="PreCountBox">
+          {{$brand[3]}}　
+          <div class="RankingCount">
+            {{$brandcount[3]}}件
+          </div>
+        </div>
+      </li>
+      <li class="d-flex RankingList"><span class="under">5位</span>　
+        <div class="PreCountBox">
+          {{$brand[4]}}　
+          <div class="RankingCount">
+            {{$brandcount[4]}}件
+          </div>
+        </div>
+      </li>
+      <li class="d-flex RankingList"><span class="under">6位</span>　
+        <div class="PreCountBox">
+          {{$brand[5]}}　
+          <div class="RankingCount">
+            {{$brandcount[5]}}件
+          </div>
+        </div>
+      </li>
+      <li class="d-flex RankingList"><span class="under">7位</span>　
+        <div class="PreCountBox">
+          {{$brand[6]}}　
+          <div class="RankingCount">
+            {{$brandcount[6]}}件
+          </div>
+        </div>
+      </li>
+      <li class="d-flex RankingList"><span class="under">8位</span>　
+        <div class="PreCountBox">
+          {{$brand[7]}}　
+          <div class="RankingCount">
+            {{$brandcount[7]}}件
+          </div>
+        </div>
+      </li>
+      <li class="d-flex RankingList"><span class="under">9位</span>　
+        <div class="PreCountBox">
+          {{$brand[8]}}　
+          <div class="RankingCount">
+            {{$brandcount[8]}}件
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="contact" class="tab-pane" role="tabpanel" aria-labelledby="contact-tab">
+    <ul>
+      <li class="d-flex RankingList"><img src="{{  asset('img/f3-1.png') }}" alt="" class="top3">　
+        <div class="PreCountBox">
+          {{$bodytype[0]}}　
+          <div class="RankingCount">
+            {{$bodytypecount[0]}}件
+          </div>
+        </div>
+      </li>
+      <li class="d-flex RankingList"><img src="{{  asset('img/f3-2.png') }}" alt="" class="top3">　
+        <div class="PreCountBox">
+          {{$bodytype[1]}}　
+          <div class="RankingCount">
+            {{$bodytypecount[1]}}件
+          </div>
+        </div>
+      </li>
+      <li class="d-flex RankingList"><img src="{{  asset('img/f3-3.png') }}" alt="" class="top3">　
+        <div class="PreCountBox">
+          {{$bodytype[2]}}　
+          <div class="RankingCount">
+            {{$bodytypecount[2]}}件
+          </div>
+        </div>
+      </li>
+      <li class="d-flex RankingList"><span class="under">4位</span>　
+        <div class="PreCountBox">
+          {{$bodytype[3]}}　
+          <div class="RankingCount">
+            {{$bodytypecount[3]}}件
+          </div>
+        </div>
+      </li>
+      <li class="d-flex RankingList"><span class="under">5位</span>　
+        <div class="PreCountBox">
+          {{$bodytype[4]}}　
+          <div class="RankingCount">
+            {{$bodytypecount[4]}}件
+          </div>
+        </div>
+      </li>
+      <li class="d-flex RankingList"><span class="under">6位</span>　
+        <div class="PreCountBox">
+          {{$bodytype[5]}}　
+          <div class="RankingCount">
+            {{$bodytypecount[5]}}件
+          </div>
+        </div>
+      </li>
+      <li class="d-flex RankingList"><span class="under">7位</span>　
+        <div class="PreCountBox">
+          {{$bodytype[6]}}　
+          <div class="RankingCount">
+            {{$bodytypecount[6]}}件
+          </div>
+        </div>
+      </li>
+      <li class="d-flex RankingList"><span class="under">8位</span>　
+        <div class="PreCountBox">
+          {{$bodytype[7]}}　
+          <div class="RankingCount">
+            {{$bodytypecount[7]}}件
+          </div>
+        </div>
+      </li>
+      <li class="d-flex RankingList"><span class="under">9位</span>　
+        <div class="PreCountBox">
+          {{$bodytype[8]}}　
+          <div class="RankingCount">
+            {{$bodytypecount[8]}}件
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+@include('layouts.footer')
