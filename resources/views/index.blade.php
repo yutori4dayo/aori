@@ -246,7 +246,7 @@
     <!-- /.Prefectures & SiteDescription -->
     <!-- latestPostData -->
 
-    <div class="container mt-5 mb-5">
+    <div class="container mb-5 maincontainersp">
       <div class="row">
         <div class="col-12">
           <ul class="float-sm-right">

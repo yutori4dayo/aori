@@ -166,7 +166,7 @@
                     </div>
                     <div class="col-6 col-sm-4">
                       <div class="form-group">
-                        <label for="exampleSelect1exampleFormControlSelect1">危険運転発生場所<span class="PostSpan">(必須)</span></label>
+                        <label for="exampleSelect1exampleFormControlSelect1 blah">危険運転発生場所<span class="PostSpan blah">(必須)</span></label>
                         <select class="form-control" name="Prefecture_city" id="exampleFormControlSelect1">
                           @foreach($prefectures as $prefecture)
                           <option value="{{ $prefecture->name }}">{{ $prefecture->name }}</option>

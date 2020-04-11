@@ -2,13 +2,13 @@
 <body>
 @include('layouts.nav')
 <ul id="myTab" class="nav nav-tabs RankingTab" role="tablist">
-  <li class="nav-item">
+  <li class="nav-item RankingNav">
     <a href="#home" id="home-tab" class="nav-link active" role="tab" data-toggle="tab" aria-controls="home" aria-selected="true">場所</a>
   </li>
-  <li class="nav-item">
+  <li class="nav-item RankingNav">
     <a href="#profile" id="profile-tab" class="nav-link" role="tab" data-toggle="tab" aria-controls="profile" aria-selected="false">ブランド</a>
   </li>
-  <li class="nav-item">
+  <li class="nav-item RankingNav">
     <a href="#contact" id="contact-tab" class="nav-link" role="tab" data-toggle="tab" aria-controls="contact" aria-selected="false">ボディタイプ</a>
   </li>
 </ul>

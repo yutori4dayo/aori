@@ -185,6 +185,7 @@ time{
 .noimage{
   height: 108;
   width: 200;
+  padding-bottom: 10px;
 }
 
 .box{
@@ -375,6 +376,9 @@ dt::before{
   content: "\f105";
   margin-right: 10px;
   color: red!important;
+}
+.maincontainersp{
+  padding-top: 15px;
 }
 
 /* title */
@@ -588,9 +592,17 @@ dt::before{
   .check{
     font-size: 13px;
   }
+
+  .PostSupplement{
+    font-size: 10px;
+  }
 }
 
 @media (max-width: 393px){
+
+  .blah{
+    font-size: 8px;
+  }
 
   .Region1{
     left: 31px;
@@ -621,6 +633,53 @@ dt::before{
   .noimage{
     width: 135px;
   }
+
+.nav-tabs{
+  font-size: 12px;
+}
+.RankingNav{
+  padding-right: 0px;
+}
+.alert{
+  padding: 5px 4px!important;
+  font-size: 12px;
+}
+}
+
+@media (max-width: 370px){
+
+  .box{
+    height: 60px;
+    max-width: 120px;
+  }
+  .Mainnumber1{
+    font-size: 26px;
+    top: 18px;
+  }
+  .Distinction1{
+    font-size: 12px;
+    left: 7px;
+    top: 30px;
+  }
+  .Region1{
+    font-size: 12px;
+  }
+  .Classification1{
+    top: 2px;
+    left: 64px;
+  }
+  .header_list{
+    font-size: 10px;
+  }
+  .noimage{
+    width: 119px;
+    height: 62px;
+  }
+
+  .maincontainersp{
+    padding-top: 15px;
+  }
+
 }
 
 @media (min-width: 992px){
