@@ -15,10 +15,8 @@ class CreatePrefecturesTable extends Migration
     {
         Schema::create('prefectures', function (Blueprint $table) {
           $table->increments('id');
-          $table->integer('region_id')->unsigned();
           $table->integer('code');
           $table->string('name');
-          $table->foreign('region_id')->references('id')->on('regions'); //外部キー制約
         });
     }
 

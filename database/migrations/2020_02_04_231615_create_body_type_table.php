@@ -16,7 +16,7 @@ class CreateBodyTypeTable extends Migration
         Schema::create('body_type', function (Blueprint $table) {
           $table->bigIncrements('id');
           $table->string('name');
-          $table->integer('count');
+          $table->integer('count')->default(0);
           $table->timestamps();
         });
     }

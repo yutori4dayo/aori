@@ -86,12 +86,8 @@ class HomeController extends Controller
       $body_type = $request->bodytype;
       $text = $request->text;
 
-      $code = Prefectures::where(['name'=>$request->Prefecture_city])->get();
-      foreach ($code as $key) {
-        $placecode =  $key->code;
-      }
       $place = new Place();
-      $place->where('id',$placecode)->increment('count',1);
+      $place->where('name',$request->Prefecture_city)->increment('count',1);
 
       $brand = new Brand();
       $brand->where('name',$Bland)->increment('count',1);
@@ -99,9 +95,7 @@ class HomeController extends Controller
       $bodytype = new BodyType();
       $bodytype->where('name',$body_type)->increment('count',1);
 
-
       $request->session()->put('Region',$Region);
-      $request->session()->put('PlacecCode',$placecode);
       $request->session()->put('Classification',$Classification);
       $request->session()->put('Distinction',$Distinction);
       $request->session()->put('Mainnumber',$Mainnumber);
