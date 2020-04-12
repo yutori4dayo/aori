@@ -2,7 +2,7 @@ body{
   max-width: 1200px;
   margin: 0 auto;
   box-sizing: border-box;
-  background-color: gray;
+  background-color: #333;
   box-sizing: border-box;
   font-family: 'Arial',YuGothic,'Yu Gothic','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', Meiryo,'ＭＳ ゴシック',sans-serif;
 }
@@ -68,6 +68,15 @@ li{
 h1{
   margin: 5px;
   padding-top: 10px;
+  color: #ddd;
+}
+
+label{
+  color: #ddd;
+}
+
+small{
+  color: orange;
 }
 
 .NavItem{
@@ -97,6 +106,7 @@ h1{
 .SectionTitle{
   margin-top: 5px;
   font-size: 20px!important;
+  color: #555;
 }
 
 time{
