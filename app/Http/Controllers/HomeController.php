@@ -19,7 +19,6 @@ class HomeController extends Controller
 {
     public function index(){
       $prefectures = Prefectures::all();
-      $firstday = News::latest()->first();
       $Cardata = Post::orderBy('created_at', 'desc')->take(5)->get();
       return view('index',compact('Cardata','prefectures'));
     }

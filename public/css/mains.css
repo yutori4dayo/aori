@@ -6,6 +6,16 @@ body{
   box-sizing: border-box;
 }
 
+/* paginate */
+
+.page-item{
+  padding-right: 0;
+}
+
+.page-link{
+  padding: 15px 25px;
+}
+
 .SiteDescription{
   background-color: snow;
 }

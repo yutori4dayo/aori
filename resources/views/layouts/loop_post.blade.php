@@ -73,5 +73,9 @@
     </div>
   </section>
   @endforeach
-  {{ $Cardata->links() }}
+  <div class="PaginateBox">
+    <div class="Paginateinner">
+            {{ $Cardata->links() }}
+    </div>
+  </div>
 </div>
