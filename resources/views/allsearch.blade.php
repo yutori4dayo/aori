@@ -127,7 +127,7 @@
                   </div>
                   <div class="serch_box3 pl-1">
                     <input type="text" class="form-control" id="exampleInputPassword1" name="Mainnumber" placeholder="1234 「ハイフンなし半角数字」">
-                    <button type="submit" name="button" class="btn btn-primary">検索</button>
+                    <button type="submit" name="button" class="btn btn-primary mt-2">検索</button>
                   </div>
                 </div>
               </div>

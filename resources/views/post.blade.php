@@ -28,7 +28,7 @@
                       <div class="region_post">
                         <div class="form-group">
                           <label>①地域名</label>
-                          <input type="text" class="form-control" name="Region" placeholder="品川 「全角漢字orひらがな">
+                          <input type="text" class="form-control" name="Region" placeholder="品川 「全角漢字orひらがな" value="{{ old('Region') }}" id="disabled">
                         </div>
                         @if ($errors->any())
                           <div class="alert alert-danger">
@@ -42,7 +42,7 @@
                     <div class="col-12 col-sm-4">
                       <div class="form-group">
                         <label for="">②分類番号</label>
-                        <input type="number" class="form-control" id="exampleInputPassword1" name="Classification" placeholder="500 「半角数字」">
+                        <input type="number" class="form-control" id="exampleInputPassword1" name="Classification" placeholder="500 「半角数字」" value="{{ old('Classification')}}">
                       </div>
                       @if ($errors->any())
                         <div class="alert alert-danger">
@@ -56,7 +56,7 @@
                       <div class="region_post">
                         <div class="form-group">
                           <label for="">③ひらがな</label>
-                          <input type="text" class="form-control" id="exampleInputPassword1" name="Distinction" placeholder="さ 「全角ひらがな１文字」">
+                          <input type="text" class="form-control" id="exampleInputPassword1" name="Distinction" placeholder="さ 「全角ひらがな１文字」" value="{{ old('Distinction') }}">
                         </div>
                         @if ($errors->any())
                           <div class="alert alert-danger">
@@ -75,7 +75,7 @@
                       <small class="PostSupplement">「・・５６」の場合は数字の「５６」のみフォームに入力してください。</small>
                       <div class="form-group">
                         <label for="">④４桁数字<span class="PostSpan">(必須)</span></label>
-                        <input type="text" class="form-control" id="exampleInputPassword1" name="Mainnumber" placeholder="1234 「ハイフンなし半角数字」">
+                        <input type="text" class="form-control" id="exampleInputPassword1" name="Mainnumber" placeholder="1234 「ハイフンなし半角数字」" value="{{ old('Mainnumber') }}">
                       </div>
                       @if ($errors->any())
                         <div class="alert alert-danger">
@@ -180,7 +180,7 @@
                   <div class="col-12 col-sm-6">
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">詳細<span class="PostSpan">(必須)</span></label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="text" placeholder="ナンバーや個人情報の記述は削除対象になります。100文字"></textarea>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="text" placeholder="ナンバーや個人情報の記述は削除対象になります。100文字" value="text"></textarea>
                     </div>
                     @if ($errors->any())
                       <div class="alert alert-danger">
@@ -212,4 +212,5 @@
     </div>
     <!-- /.content -->
   </div>
+
 @include('layouts.footer')

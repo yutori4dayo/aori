@@ -18,11 +18,8 @@ use Intervention\Image\ImageManagerStatic as Image;
 class HomeController extends Controller
 {
     public function index(){
-      // $HomeService = new HomeService();
-      // $HomeService->getNews();
       $prefectures = Prefectures::all();
       $firstday = News::latest()->first();
-      // $newcontents =  NewsContents::where('news_id',$firstday->id)->get();
       $Cardata = Post::orderBy('created_at', 'desc')->take(5)->get();
       return view('index',compact('Cardata','prefectures'));
     }

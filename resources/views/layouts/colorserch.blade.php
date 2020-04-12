@@ -7,7 +7,7 @@
             <label for="exampleSelect1exampleFormControlSelect1">　　　　　色</label>
           </div>
           <div class="serch_box2 pl-1">
-        <select class="form-control" name="Color" id="exampleFormControlSelect1">
+        <select class="form-control target" name="Color" id="exampleFormControlSelect1">
           <option value="白">白</option>
           <option value="黒">黒</option>
           <option value="銀">銀</option>

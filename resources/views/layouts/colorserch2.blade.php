@@ -6,7 +6,7 @@
       <label for="exampleSelect1exampleFormControlSelect1">　　ブランド</label>
       </div>
       <div class="serch_box2 pl-1">
-      <select class="form-control" name="Bland" id="exampleFormControlSelect2">
+      <select class="form-control target" name="Bland" id="exampleFormControlSelect2">
         <option value="トヨタ">トヨタ</option>
         <option value="レクサス">レクサス</option>
         <option value="ニッサン">ニッサン</option>

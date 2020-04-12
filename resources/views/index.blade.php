@@ -16,13 +16,13 @@
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                       <div class="modal-body">
-                        <dd><a href="{{ url('/prefectures/pre1') }}">北海道</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre2') }}">青森</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre3') }}">岩手</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre4') }}">宮城</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre5') }}">秋田</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre6') }}">山形</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre7') }}">福島</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 1)  }}">北海道</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 2)  }}">青森</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 3)  }}">岩手</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 4)  }}">宮城</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 5)  }}">秋田</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 6)  }}">山形</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 7)  }}">福島</a></dd>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
@@ -30,13 +30,13 @@
                     </div><!-- /.modal-content -->
                   </div><!-- /.modal-dialog -->
                 </div>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre1') }}">北海道</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre2') }}">青森</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre3') }}">岩手</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre4') }}">宮城</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre5') }}">秋田</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre6') }}">山形</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre7') }}">福島</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 1)  }}">北海道</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 2)  }}">青森</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 3)  }}">岩手</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 4)  }}">宮城</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 5)  }}">秋田</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 6)  }}">山形</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 7)  }}">福島</a></dd>
               </dl>
             </div>
             <div class="Prefectures">
@@ -46,15 +46,15 @@
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                       <div class="modal-body">
-                        <dd><a href="{{ url('/prefectures/pre8') }}">茨城</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre9') }}">栃木</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre10') }}">群馬</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre11') }}">埼玉</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre12') }}">千葉</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre13') }}">東京</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre14') }}">神奈川</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre15') }}">山梨</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre16') }}">長野</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 8)  }}">茨城</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 9)  }}">栃木</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 10)  }}">群馬</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 11)  }}">埼玉</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 12)  }}">千葉</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 13)  }}">東京</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 14)  }}">神奈川</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 19)  }}">山梨</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 20)  }}">長野</a></dd>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
@@ -62,15 +62,15 @@
                     </div><!-- /.modal-content -->
                   </div><!-- /.modal-dialog -->
                 </div>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre8') }}">茨城</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre9') }}">栃木</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre10') }}">群馬</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre11') }}">埼玉</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre12') }}">千葉</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre13') }}">東京</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre14') }}">神奈川</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre15') }}">山梨</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre16') }}">長野</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 8)  }}">茨城</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 9)  }}">栃木</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 10)  }}">群馬</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 11)  }}">埼玉</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 12)  }}">千葉</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 13)  }}">東京</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 14)  }}">神奈川</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 19)  }}">山梨</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 20)  }}">長野</a></dd>
               </dl>
             </div>
             <div class="Prefectures">
@@ -80,10 +80,10 @@
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                       <div class="modal-body">
-                        <dd><a href="{{ url('/prefectures/pre17') }}">新潟</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre18') }}">富山</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre19') }}">石川</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre20') }}">福井</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 15)  }}">新潟</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 16)  }}">富山</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 17)  }}">石川</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 18)  }}">福井</a></dd>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
@@ -91,10 +91,10 @@
                     </div><!-- /.modal-content -->
                   </div><!-- /.modal-dialog -->
                 </div>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre17') }}">新潟</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre18') }}">富山</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre19') }}">石川</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre20') }}">福井</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 15)  }}">新潟</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 16)  }}">富山</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 17)  }}">石川</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 18)  }}">福井</a></dd>
               </dl>
             </div>
             <div class="Prefectures">
@@ -104,10 +104,10 @@
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                       <div class="modal-body">
-                        <dd><a href="{{ url('/prefectures/pre21') }}">岐阜</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre22') }}">静岡</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre23') }}">愛知</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre24') }}">三重</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 21)  }}">岐阜</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 22)  }}">静岡</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 23)  }}">愛知</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 24)  }}">三重</a></dd>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
@@ -115,10 +115,10 @@
                     </div><!-- /.modal-content -->
                   </div><!-- /.modal-dialog -->
                 </div>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre21') }}">岐阜</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre22') }}">静岡</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre23') }}">愛知</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre24') }}">三重</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 21)  }}">岐阜</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 22)  }}">静岡</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 23)  }}">愛知</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 24)  }}">三重</a></dd>
               </dl>
             </div>
             <div class="Prefectures">
@@ -128,12 +128,12 @@
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                       <div class="modal-body">
-                        <dd><a href="{{ url('/prefectures/pre25') }}">滋賀</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre26') }}">京都</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre27') }}">大阪</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre28') }}">兵庫</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre29') }}">奈良</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre30') }}">和歌山</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 25)  }}">滋賀</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 26)  }}">京都</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 27)  }}">大阪</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 28)  }}">兵庫</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 29)  }}">奈良</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 30)  }}">和歌山</a></dd>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
@@ -141,12 +141,12 @@
                     </div><!-- /.modal-content -->
                   </div><!-- /.modal-dialog -->
                 </div>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre25') }}">滋賀</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre26') }}">京都</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre27') }}">大阪</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre28') }}">兵庫</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre29') }}">奈良</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre30') }}">和歌山</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 25)  }}">滋賀</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 26)  }}">京都</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 27)  }}">大阪</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 28)  }}">兵庫</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 29)  }}">奈良</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 30)  }}">和歌山</a></dd>
               </dl>
             </div>
             <div class="Prefectures">
@@ -156,10 +156,10 @@
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                       <div class="modal-body">
-                        <dd><a href="{{ url('/prefectures/pre31') }}">鳥取</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre32') }}">島根</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre33') }}">岡山</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre34') }}">広島</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 31)  }}">鳥取</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 32)  }}">島根</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 33)  }}">岡山</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 34)  }}">広島</a></dd>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
@@ -167,10 +167,10 @@
                     </div><!-- /.modal-content -->
                   </div><!-- /.modal-dialog -->
                 </div>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre31') }}">鳥取</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre32') }}">島根</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre33') }}">岡山</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre34') }}">広島</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 31)  }}">鳥取</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 32)  }}">島根</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 33)  }}">岡山</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 34)  }}">広島</a></dd>
               </dl>
             </div>
             <div class="Prefectures">
@@ -180,10 +180,10 @@
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                       <div class="modal-body">
-                        <dd><a href="{{ url('/prefectures/pre35') }}">徳島</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre36') }}">香川</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre37') }}">高知</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre38') }}">愛媛</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 36)  }}">徳島</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 37)  }}">香川</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 39)  }}">高知</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 38)  }}">愛媛</a></dd>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
@@ -191,10 +191,10 @@
                     </div><!-- /.modal-content -->
                   </div><!-- /.modal-dialog -->
                 </div>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre35') }}">徳島</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre36') }}">香川</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre37') }}">高知</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre38') }}">愛媛</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 36)  }}">徳島</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 37)  }}">香川</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 39)  }}">高知</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 38)  }}">愛媛</a></dd>
               </dl>
             </div>
             <div class="Prefectures">
@@ -204,15 +204,15 @@
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                       <div class="modal-body">
-                        <dd><a href="{{ url('/prefectures/pre39') }}">山口</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre40') }}">福岡</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre41') }}">大分</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre42') }}">佐賀</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre43') }}">熊本</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre44') }}">長崎</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre45') }}">宮城</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre46') }}">鹿児島</a></dd>
-                        <dd><a href="{{ url('/prefectures/pre47') }}">沖縄</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 35)  }}">山口</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 40)  }}">福岡</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 44)  }}">大分</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 41)  }}">佐賀</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 43)  }}">熊本</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 42)  }}">長崎</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 45)  }}">宮城</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 46)  }}">鹿児島</a></dd>
+                        <dd class=""><a href="{{ action('PrefecturesController@pre0', 47)  }}">沖縄</a></dd>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
@@ -220,15 +220,15 @@
                     </div><!-- /.modal-content -->
                   </div><!-- /.modal-dialog -->
                 </div>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre39') }}">山口</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre40') }}">福岡</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre41') }}">大分</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre42') }}">佐賀</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre43') }}">熊本</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre44') }}">長崎</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre45') }}">宮城</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre46') }}">鹿児島</a></dd>
-                <dd class="sp_hidden"><a href="{{ url('/prefectures/pre47') }}">沖縄</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 35)  }}">山口</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 40)  }}">福岡</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 44)  }}">大分</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 41)  }}">佐賀</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 43)  }}">熊本</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 42)  }}">長崎</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 45)  }}">宮城</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 46)  }}">鹿児島</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 47)  }}">沖縄</a></dd>
               </dl>
             </div>
           </div>
@@ -323,7 +323,7 @@
                   @if($item->car_img === null)
                   <li class="Textlist"><img src="{{  asset('img/noimage.png') }}" class="noimage"></li>
                   @else
-                  <li class="Textlist"><a href="{{ action('HomeController@carimage', $item->id) }}"><img src="{{  asset('img/'.$item->car_img) }}" class="image"></a></li>
+                  <li class="Textlist"><a href="{{ action('HomeController@carimage', $item->id) }}"><img src="{{  asset('img/'.$item->car_img) }}" class="noimage"></a></li>
                   @endif
                   <li class="list-item text_area">{{ $item->text}}</li>
                 </ul>

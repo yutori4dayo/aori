@@ -6,14 +6,21 @@
       </div>
       <div class="modal-body">
         <div class="container">
+          <div class="row">
+            <div class="col-12">
               @include('layouts.colorserch',['Prefecture_city'=>'{{$place}}'])
-
+            </div>
+            <div class="col-12">
               @include('layouts.colorserch2',['Prefecture_city'=>'{{$place}}'])
-
+            </div>
+            <div class="col-12">
               @include('layouts.colorserch3',['Prefecture_city'=>'{{$place}}'])
-
+            </div>
+            <div class="col-12">
               @include('layouts.colorserch4',['Prefecture_city'=>'{{$place}}'])
+            </div>
           </div>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>

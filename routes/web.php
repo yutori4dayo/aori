@@ -24,7 +24,7 @@
 //
 // Route::post('/add', 'HomeController@add');
 
-
+Route::get('/prefectures/{id}', 'PrefecturesController@pre0');
 Route::get('/', 'HomeController@index');
 
 Route::get('/post', 'HomeController@post');

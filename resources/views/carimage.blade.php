@@ -2,7 +2,11 @@
   <body>
 @include('layouts.nav')
     @if($Carimage)
-    <img src="{{  asset('big/'.$Carimage) }}">
+    <div class="imgbox">
+      <div class="blahbox">
+        <img src="{{  asset('big/'.$Carimage) }}" class="bigimage">
+      </div>
+    </div>
     @elseif($Carimage === null)
     <p>No Image</p>
     @endif

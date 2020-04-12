@@ -8,6 +8,17 @@ use App\Prefectures;
 
 class PrefecturesController extends Controller
 {
+  public function Pre0($id){
+    $prefectures = Prefectures::all();
+    $preid = Prefectures::where('code',$id)->get();
+    foreach ($preid as $pre) {
+      $pre->name;
+    }
+    $Cardata = Post::where('Prefecture_city',$pre->name)->orderBy('created_at','desc')->paginate(5);
+    $place = $pre->name;
+    return view('prefectures.pre1',compact('Cardata','prefectures','place'));
+  }
+
   public function Pre1(){
     $prefectures = Prefectures::all();
     $Cardata = Post::where('Prefecture_city','北海道')->orderBy('created_at','desc')->get();
@@ -24,7 +35,7 @@ class PrefecturesController extends Controller
 
   public function Pre3(){
     $prefectures = Prefectures::all();
-    $Cardata = Post::where('Prefecture_city','岩手県')->orderBy('created_at','desc')->get();
+    $Cardata = Post::where('Prefecture_city','岩手県')->orderBy('created_at','desc')->paginate(5);
     $place = '岩手県';
     return view('prefectures.pre3',compact('Cardata','prefectures','place'));
   }

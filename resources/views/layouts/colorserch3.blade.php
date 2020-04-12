@@ -7,7 +7,7 @@
           <label for="exampleSelect1exampleFormControlSelect1">ボディタイプ</label>
         </div>
         <div class="serch_box2 pl-1">
-          <select class="form-control" name="bodytype" id="exampleFormControlSelect3">
+          <select class="form-control target" name="bodytype" id="exampleFormControlSelect3">
             <option value="セダン">セダン</option>
             <option value="軽自動車">軽自動車</option>
             <option value="コンパクトカー">コンパクトカー</option>

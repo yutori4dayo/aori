@@ -361,6 +361,13 @@ i {
   padding: 15px 0;
   background-color: snow
 }
+.blahbox{
+  margin: 0 auto;
+  text-align: center;
+}
+.imgbox{
+  padding: 0 50px;
+}
 
 
 dt::before{
@@ -474,6 +481,9 @@ dt::before{
   .modal-body{
     font-size: 18px;
   }
+.bigimage{
+  width: 90%;
+}
 }
 
 @media (max-width: 767px){
@@ -598,6 +608,15 @@ dt::before{
   }
 }
 
+@media (max-width: 422px){
+  .serch_box1{
+    font-size: 10px;
+  }
+  .target{
+    width: 100px;
+  }
+}
+
 @media (max-width: 393px){
 
   .blah{
@@ -678,6 +697,9 @@ dt::before{
 
   .maincontainersp{
     padding-top: 15px;
+  }
+  .prebtn{
+    font-size: 5px!important;
   }
 
 }
