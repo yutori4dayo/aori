@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Place;
 use App\Brand;
 use App\BodyType;
+use App\Region;
 
 class RankingController extends Controller
 {
@@ -25,6 +26,11 @@ class RankingController extends Controller
         $bodytype[] =$bodytype_ranking->name;
         $bodytypecount[] = $bodytype_ranking->count;
       }
-      return view('placeranking',compact('place','brand','bodytype','placecount','brandcount','bodytypecount'));
+      $region_rankings = Region::orderBy('count', 'desc')->take(10)->get();
+      foreach ($region_rankings as $region_ranking) {
+        $region[] =$region_ranking->name;
+        $regioncount[] = $region_ranking->count;
+      }
+      return view('placeranking',compact('place','brand','bodytype','placecount','brandcount','bodytypecount','region','regioncount'));
     }
 }

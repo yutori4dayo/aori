@@ -11,6 +11,9 @@
   <li class="nav-item RankingNav">
     <a href="#contact" id="contact-tab" class="nav-link" role="tab" data-toggle="tab" aria-controls="contact" aria-selected="false">ボディタイプ</a>
   </li>
+  <li class="nav-item RankingNav">
+    <a href="#region" id="region-tab" class="nav-link" role="tab" data-toggle="tab" aria-controls="region" aria-selected="false">地域名</a>
+  </li>
 </ul>
 
 
@@ -243,6 +246,83 @@
         </div>
       </li>
     </ul>
+  </div>
+  <div id="region" class="tab-pane" role="tabpanel" aria-labelledby="region-tab">
+    <ul>
+      <li class="d-flex RankingList"><img src="{{  asset('img/f3-1.png') }}" alt="" class="top3">　
+        <div class="PreCountBox">
+          {{$region[0]}}　
+          <div class="RankingCount">
+            {{$regioncount[0]}}件
+          </div>
+        </div>
+      </li>
+      <li class="d-flex RankingList"><img src="{{  asset('img/f3-2.png') }}" alt="" class="top3">　
+        <div class="PreCountBox">
+          {{$region[1]}}　
+          <div class="RankingCount">
+            {{$regioncount[1]}}件
+          </div>
+        </div>
+      </li>
+      <li class="d-flex RankingList"><img src="{{  asset('img/f3-3.png') }}" alt="" class="top3">　
+        <div class="PreCountBox">
+          {{$region[2]}}　
+          <div class="RankingCount">
+            {{$regioncount[2]}}件
+          </div>
+        </div>
+      </li>
+      <li class="d-flex RankingList"><span class="under">4位</span>　
+        <div class="PreCountBox">
+          {{$region[3]}}　
+          <div class="RankingCount">
+            {{$regioncount[3]}}件
+          </div>
+        </div>
+      </li>
+      <li class="d-flex RankingList"><span class="under">5位</span>　
+        <div class="PreCountBox">
+          {{$region[4]}}　
+          <div class="RankingCount">
+            {{$regioncount[4]}}件
+          </div>
+        </div>
+      </li>
+      <li class="d-flex RankingList"><span class="under">6位</span>　
+        <div class="PreCountBox">
+          {{$region[5]}}　
+          <div class="RankingCount">
+            {{$regioncount[5]}}件
+          </div>
+        </div>
+      </li>
+      <li class="d-flex RankingList"><span class="under">7位</span>　
+        <div class="PreCountBox">
+          {{$region[6]}}　
+          <div class="RankingCount">
+            {{$regioncount[6]}}件
+          </div>
+        </div>
+      </li>
+      <li class="d-flex RankingList"><span class="under">8位</span>　
+        <div class="PreCountBox">
+          {{$region[7]}}　
+          <div class="RankingCount">
+            {{$regioncount[7]}}件
+          </div>
+        </div>
+      </li>
+      <li class="d-flex RankingList"><span class="under">9位</span>　
+        <div class="PreCountBox">
+          {{$region[8]}}　
+          <div class="RankingCount">
+            {{$regioncount[8]}}件
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
   </div>
 </div>
 

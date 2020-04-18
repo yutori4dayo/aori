@@ -47,7 +47,6 @@ class PrefecturesController extends Controller
     }elseif(strlen($request->car_number) === 2){
       $tests = substr_replace($request->car_number,' ',-2,0);
        $number = '• '.'•  '.$tests;
-      // dd($test);
     }elseif(strlen($request->car_number) === 1){
       $tests = substr_replace($request->car_number,' ',-3,0);
       $number = '• '.'• '.' •'.$tests;
