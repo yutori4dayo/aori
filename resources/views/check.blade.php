@@ -8,13 +8,12 @@
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-12">
-              <h1 class="m-0 text-dark">登録確認</h1>
+              <h2 class="m-0">登録確認</h2>
             </div><!-- /.col -->
           </div><!-- /.row -->
         </div><!-- /.container-fluid -->
       </div>
       <!-- /.content-header -->
-
       <div class="content">
         <div class="container-fluid">
           <div class="row">
@@ -33,6 +32,7 @@
                 </thead>
                 <tbody>
                 <tr>
+                  <img src="{{  asset('img/'.$CarData['tests']) }}" class="noimage">
                 <td>{{$CarData['Region']}}</td>
                 <td>{{$CarData['Classification']}}</td>
                 <td>{{$CarData['Distinction']}}</td>

@@ -27,8 +27,13 @@
                     <div class="col-12 col-sm-4">
                       <div class="region_post">
                         <div class="form-group">
-                          <label>①地域名</label>
-                          <input type="text" class="form-control" name="Region" placeholder="品川 「全角漢字orひらがな" value="{{ old('Region') }}" id="disabled">
+                          <label for="exampleSelect1exampleFormControlSelect1">①地域名</label>
+                          <select class="form-control" name="Region" id="mySelect2">
+                            <option value="不明">不明</option>
+                            @foreach($regions as $region)
+                            <option value="{{$region->name}}" value="{{ old('Region') }}">{{$region->name}}</option>
+                            @endforeach
+                          </select>
                         </div>
                         @if ($errors->any())
                           <div class="alert alert-danger">
@@ -114,34 +119,9 @@
                         <label for="exampleSelect1exampleFormControlSelect1">ブランド</label>
                         <select class="form-control" name="Bland" id="exampleFormControlSelect2">
                           <option value="不明">不明</option>
-                          <option value="トヨタ">トヨタ</option>
-                          <option value="レクサス">レクサス</option>
-                          <option value="ニッサン">ニッサン</option>
-                          <option value="ホンダ">ホンダ</option>
-                          <option value="マツダ">マツダ</option>
-                          <option value="スバル">スバル</option>
-                          <option value="三菱">三菱</option>
-                          <option value="スズキ">スズキ</option>
-                          <option value="ダイハツ">ダイハツ</option>
-                          <option value="BMW">BMW</option>
-                          <option value="アウディ">アウディ</option>
-                          <option value="ベンツ">ベンツ</option>
-                          <option value="フォルクスワーゲン">フォルクスワーゲン</option>
-                          <option value="MINI">MINI</option>
-                          <option value="シエトロン">シエトロン</option>
-                          <option value="ジープ">ジープ</option>
-                          <option value="ジャガー">ジャガー</option>
-                          <option value="ルノー">ルノー</option>
-                          <option value="シボレー">シボレー</option>
-                          <option value="フィアット・アバルト">フィアット・アバルト</option>
-                          <option value="ランドローバー">ランドローバー</option>
-                          <option value="キャデラック">キャデラック</option>
-                          <option value="プジョー">プジョー</option>
-                          <option value="ポルシェ">ポルシェ</option>
-                          <option value="アルファロメオ">アルファロメオ</option>
-                          <option value="いすゞ">いすゞ</option>
-                          <option value="日野">日野</option>
-                          <option value="三菱ふそう">三菱ふそう</option>
+                          @foreach($brands as $brand)
+                          <option value="{{$brand->name}}">{{$brand->name}}</option>
+                          @endforeach
                         </select>
                       </div>
                     </div>
@@ -151,15 +131,9 @@
                           <label for="exampleSelect1exampleFormControlSelect1">ボディタイプ</label>
                           <select class="form-control" name="bodytype" id="exampleFormControlSelect3">
                             <option value="不明">不明</option>
-                            <option value="セダン">セダン</option>
-                            <option value="軽自動車">軽自動車</option>
-                            <option value="コンパクトカー">コンパクトカー</option>
-                            <option value="ミニバン">ミニバン</option>
-                            <option value="ステーションワゴン">ステーションワゴン</option>
-                            <option value="SUV">SUV</option>
-                            <option value="クーペ">クーペ</option>
-                            <option value="ハッチバック">ハッチバック</option>
-                            <option value="オープンカー">オープンカー</option>
+                            @foreach($bodytypes as $bodytype)
+                            <option value="{{$bodytype->name}}">{{$bodytype->name}}</option>
+                            @endforeach
                           </select>
                         </div>
                       </div>
@@ -196,7 +170,8 @@
                     <small class="PostSupplement">投稿された画像は、自動的にボカし処理されます。</small>
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">画像投稿</label>
-                          <input type="file" name="car_img">
+                          <input type="file" name="car_img" onchange="previewFile()">
+                          <img src="{{  asset('img/noimage.png') }}" height="200" alt="Image preview..." id="target">
                     </div>
                   </div>
                 </div>

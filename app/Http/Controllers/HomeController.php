@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\Region;
 use App\News;
 use App\Prefectures;
 use App\NewsContents;
@@ -32,7 +33,11 @@ class HomeController extends Controller
 
     public function post(){
       $prefectures = Prefectures::all();
-      return view('post',compact('prefectures'));
+      $brands = Brand::all();
+      $bodytypes = BodyType::all();
+      $regions = Region::all();
+
+      return view('post',compact('prefectures','brands','bodytypes','regions'));
     }
 
 
@@ -90,6 +95,9 @@ class HomeController extends Controller
 
       $bodytype = new BodyType();
       $bodytype->where('name',$body_type)->increment('count',1);
+
+      $bodytype = new Region();
+      $bodytype->where('name',$Region)->increment('count',1);
 
       $request->session()->put('Region',$Region);
       $request->session()->put('Classification',$Classification);

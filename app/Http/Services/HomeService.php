@@ -56,7 +56,6 @@ class HomeService
     }elseif(strlen($val) === 2){
       $tests = substr_replace($val,' ',-2,0);
        return $test = '• '.'•  '.$tests;
-      // dd($test);
     }elseif(strlen($val) === 1){
       $tests = substr_replace($val,' ',-3,0);
       return $test = '• '.'• '.' •'.$tests;

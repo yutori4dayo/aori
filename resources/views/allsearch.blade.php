@@ -15,9 +15,9 @@
           <div class="serch_box2 pl-1">
             <select class="form-control" name="Prefecture_city" id="exampleFormControlSelect1">
               @if(isset($prefectures))
-              @foreach($prefectures as $prefecture)
-              <option value="{{ $prefecture->name }}">{{ $prefecture->name }}</option>
-              @endforeach
+                @foreach($prefectures as $prefecture)
+                <option value="{{ $prefecture->name }}">{{ $prefecture->name }}</option>
+                @endforeach
               @endif
             </select>
           </div>
@@ -52,34 +52,11 @@
               </div>
               <div class="serch_box2 pl-1">
                 <select class="form-control" name="Bland" id="exampleFormControlSelect2">
-                  <option value="トヨタ">トヨタ</option>
-                  <option value="レクサス">レクサス</option>
-                  <option value="ニッサン">ニッサン</option>
-                  <option value="ホンダ">ホンダ</option>
-                  <option value="マツダ">マツダ</option>
-                  <option value="スバル">スバル</option>
-                  <option value="三菱">三菱</option>
-                  <option value="スズキ">スズキ</option>
-                  <option value="ダイハツ">ダイハツ</option>
-                  <option value="BMW">BMW</option>
-                  <option value="アウディ">アウディ</option>
-                  <option value="ベンツ">ベンツ</option>
-                  <option value="フォルクスワーゲン">フォルクスワーゲン</option>
-                  <option value="MINI">MINI</option>
-                  <option value="シエトロン">シエトロン</option>
-                  <option value="ジープ">ジープ</option>
-                  <option value="ジャガー">ジャガー</option>
-                  <option value="ルノー">ルノー</option>
-                  <option value="シボレー">シボレー</option>
-                  <option value="フィアット・アバルト">フィアット・アバルト</option>
-                  <option value="ランドローバー">ランドローバー</option>
-                  <option value="キャデラック">キャデラック</option>
-                  <option value="プジョー">プジョー</option>
-                  <option value="ポルシェ">ポルシェ</option>
-                  <option value="アルファロメオ">アルファロメオ</option>
-                  <option value="いすゞ">いすゞ</option>
-                  <option value="日野">日野</option>
-                  <option value="三菱ふそう">三菱ふそう</option>
+                  @if(isset($brands))
+                    @foreach($brands as $brand)
+                    <option value="{{$brand->name}}">{{$brand->name}}</option>
+                    @endforeach
+                  @endif
                 </select>
               </div>
             </div>
@@ -92,15 +69,11 @@
               </div>
               <div class="serch_box2 pl-1">
                 <select class="form-control" name="bodytype" id="exampleFormControlSelect3">
-                  <option value="セダン">セダン</option>
-                  <option value="軽自動車">軽自動車</option>
-                  <option value="コンパクトカー">コンパクトカー</option>
-                  <option value="ミニバン">ミニバン</option>
-                  <option value="ステーションワゴン">ステーションワゴン</option>
-                  <option value="SUV">SUV</option>
-                  <option value="クーペ">クーペ</option>
-                  <option value="ハッチバック">ハッチバック</option>
-                  <option value="オープンカー">オープンカー</option>
+                  @if(isset($bodytypes))
+                    @foreach($bodytypes as $bodytype)
+                    <option value="{{$bodytype->name}}">{{$bodytype->name}}</option>
+                    @endforeach
+                  @endif
                 </select>
               </div>
             </div>

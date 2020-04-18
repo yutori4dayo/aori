@@ -6,7 +6,18 @@ body{
   box-sizing: border-box;
   font-family: 'Arial',YuGothic,'Yu Gothic','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', Meiryo,'ＭＳ ゴシック',sans-serif;
 }
-
+.select2{
+    width: 100%!important;
+}
+.select2-container--default .select2-selection--single{
+  height: 39px;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 36px;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+  line-height: 39px;
+}
 /* paginate */
 
 .page-item{
@@ -68,6 +79,9 @@ li{
 h1{
   margin: 5px;
   padding-top: 10px;
+  color: #ddd;
+}
+h2{
   color: #ddd;
 }
 
@@ -387,6 +401,14 @@ i {
   padding: 0 50px;
 }
 
+.FormBox{
+  padding-top: 15px;
+}
+
+table{
+  background-color: snow;
+}
+
 
 dt::before{
   font-family: "Font Awesome 5 Free";
@@ -647,7 +669,7 @@ dt::before{
 
   .Classification1{
     left: 75px;
-    font-size: 15px;
+    font-size: 13px;
     top: 7px;
   }
 
@@ -681,6 +703,16 @@ dt::before{
   padding: 5px 4px!important;
   font-size: 12px;
 }
+.strlen{
+  left: 29px!important;
+}
+.Region1{
+  top: 7px;
+  font-size: 14px;
+}
+.Classification1{
+  font-size: 14px;
+}
 }
 
 @media (max-width: 370px){
@@ -702,7 +734,7 @@ dt::before{
     font-size: 12px;
   }
   .Classification1{
-    top: 2px;
+    top: 5px;
     left: 64px;
   }
   .header_list{
@@ -712,12 +744,18 @@ dt::before{
     width: 119px;
     height: 62px;
   }
+  .strlen{
+    left: 5px;
+  }
 
   .maincontainersp{
     padding-top: 15px;
   }
   .prebtn{
     font-size: 5px!important;
+  }
+  .strlen{
+    left: 24px!important;
   }
 
 }

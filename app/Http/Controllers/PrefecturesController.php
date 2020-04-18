@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\Brand;
+use App\BodyType;
 use App\Prefectures;
 
 class PrefecturesController extends Controller
@@ -58,7 +60,9 @@ class PrefecturesController extends Controller
 
  public function serchcardataall(){
    $prefectures = Prefectures::all();
-   return view('allsearch',compact('prefectures'));
+   $brands = Brand::all();
+   $bodytypes = BodyType::all();
+   return view('allsearch',compact('prefectures','brands','bodytypes'));
  }
 // a
  public function allsearchs(Request $request){
@@ -68,28 +72,36 @@ class PrefecturesController extends Controller
         $Cardatass = '• '.$tests;
          $Cardata =  Post::where('Mainnumber',$Cardatass)->orderBy('created_at','desc')->get();
          $prefectures = Prefectures::all();
+         $brands = Brand::all();
+         $bodytypes = BodyType::all();
          $count = count($Cardata);
-          return view('allsearch',compact('Cardata','prefectures','count'));
+          return view('allsearch',compact('Cardata','prefectures','count','brands','bodytypes'));
      }elseif(strlen($request->Mainnumber) === 2){
        $tests = substr_replace($request->Mainnumber,' ',-2,0);
         $Cardatass = '• '.'•  '.$tests;
-        $Cardata =  Post::where('Mainnumber',$Cardatass)->orderBy('created_at','desc')->get();
+        $Cardata =  Post::where('Mainnumber',$Cardatass)->orderBy('created_at','desc','brands','bodytypes')->get();
         $prefectures = Prefectures::all();
+        $brands = Brand::all();
+        $bodytypes = BodyType::all();
         $count = count($Cardata);
          return view('allsearch',compact('Cardata','prefectures','count'));
      }elseif(strlen($request->Mainnumber) === 1){
        $tests = substr_replace($request->Mainnumber,' ',-3,0);
        $Cardatass = '• '.'• '.' •'.$tests;
-        $Cardata =  Post::where('Mainnumber',$Cardatass)->orderBy('created_at','desc')->get();
+        $Cardata =  Post::where('Mainnumber',$Cardatass)->orderBy('created_at','desc','brands','bodytypes')->get();
         $prefectures = Prefectures::all();
+        $brands = Brand::all();
+        $bodytypes = BodyType::all();
         $count = count($Cardata);
-         return view('allsearch',compact('Cardata','prefectures','count'));
+         return view('allsearch',compact('Cardata','prefectures','count','brands','bodytypes'));
      }else {
        $Cardatass = substr_replace($request->Mainnumber,'-',2,0);
         $Cardata =  Post::where('Mainnumber',$Cardatass)->orderBy('created_at','desc')->get();
         $prefectures = Prefectures::all();
+        $brands = Brand::all();
+        $bodytypes = BodyType::all();
         $count = count($Cardata);
-         return view('allsearch',compact('Cardata','prefectures','count'));
+         return view('allsearch',compact('Cardata','prefectures','count','brands','bodytypes'));
      }
    }
    $Cardata =  Post::where('Color',$request->Color)

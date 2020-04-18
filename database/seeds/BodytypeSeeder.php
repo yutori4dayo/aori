@@ -17,9 +17,9 @@ class BodytypeSeeder extends Seeder
           [  'name' => 'コンパクトカー'],
           [  'name' => 'ミニバン'],
           [  'name' => 'ステーションワゴン'],
-          [ 'name' => 'SUV'],
+          [  'name' => 'SUV'],
           [  'name' => 'クーペ'],
-          [ 'name' => 'ハッチバック'],
+          [  'name' => 'ハッチバック'],
           [  'name' => 'オープンカー'],
       ]);
     }
