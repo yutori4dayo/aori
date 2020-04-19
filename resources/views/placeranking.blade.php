@@ -23,7 +23,7 @@
     <ul>
       <li class="d-flex RankingList"><img src="{{  asset('img/f3-1.png') }}" alt="" class="top3">　
         <div class="PreCountBox">
-          {{$place[0]}}　
+            <a href="{{ action('PrefecturesController@pre0', $placeId[0])  }}">{{$place[0]}}</a>
           <div class="RankingCount">
             {{$placecount[0]}}件
           </div>
@@ -31,7 +31,7 @@
       </li>
       <li class="d-flex RankingList"><img src="{{  asset('img/f3-2.png') }}" alt="" class="top3">　
         <div class="PreCountBox">
-          {{$place[1]}}　
+        <a href="{{ action('PrefecturesController@pre0', $placeId[1])  }}">{{$place[1]}}</a>
           <div class="RankingCount">
             {{$placecount[1]}}件
           </div>
@@ -39,7 +39,7 @@
       </li>
       <li class="d-flex RankingList"><img src="{{  asset('img/f3-3.png') }}" alt="" class="top3">　
         <div class="PreCountBox">
-          {{$place[2]}}　
+          <a href="{{ action('PrefecturesController@pre0', $placeId[2])  }}">{{$place[2]}}</a>
           <div class="RankingCount">
             {{$placecount[2]}}件
           </div>
@@ -47,7 +47,7 @@
       </li>
       <li class="d-flex RankingList"><span class="under">4位</span>　
         <div class="PreCountBox">
-          {{$place[3]}}　
+          <a href="{{ action('PrefecturesController@pre0', $placeId[3])  }}">{{$place[3]}}</a>
           <div class="RankingCount">
             {{$placecount[3]}}件
           </div>
@@ -55,7 +55,7 @@
       </li>
       <li class="d-flex RankingList"><span class="under">5位</span>　
         <div class="PreCountBox">
-          {{$place[4]}}　
+          <a href="{{ action('PrefecturesController@pre0', $placeId[4])  }}">{{$place[4]}}</a>
           <div class="RankingCount">
             {{$placecount[4]}}件
           </div>
@@ -63,7 +63,7 @@
       </li>
       <li class="d-flex RankingList"><span class="under">6位</span>　
         <div class="PreCountBox">
-          {{$place[5]}}　
+          <a href="{{ action('PrefecturesController@pre0', $placeId[5])  }}">{{$place[5]}}</a>
           <div class="RankingCount">
             {{$placecount[5]}}件
           </div>
@@ -71,7 +71,7 @@
       </li>
       <li class="d-flex RankingList"><span class="under">7位</span>　
         <div class="PreCountBox">
-          {{$place[6]}}　
+          <a href="{{ action('PrefecturesController@pre0', $placeId[6])  }}">{{$place[6]}}</a>
           <div class="RankingCount">
             {{$placecount[6]}}件
           </div>
@@ -79,7 +79,7 @@
       </li>
       <li class="d-flex RankingList"><span class="under">8位</span>　
         <div class="PreCountBox">
-          {{$place[7]}}　
+        <a href="{{ action('PrefecturesController@pre0', $placeId[7])  }}">{{$place[7]}}</a>
           <div class="RankingCount">
             {{$placecount[7]}}件
           </div>
@@ -87,7 +87,7 @@
       </li>
       <li class="d-flex RankingList"><span class="under">9位</span>　
         <div class="PreCountBox">
-          {{$place[8]}}　
+          <a href="{{ action('PrefecturesController@pre0', $placeId[8])  }}">{{$place[8]}}</a>
           <div class="RankingCount">
             {{$placecount[8]}}件
           </div>

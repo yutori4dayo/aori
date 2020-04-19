@@ -20,7 +20,7 @@ class HomeController extends Controller
 {
     public function index(){
       $prefectures = Prefectures::all();
-      $Cardata = Post::orderBy('created_at', 'desc')->take(5)->get();
+      $Cardata = Post::orderBy('created_at', 'desc')->simplePaginate(config('app.paginatecount'));
       return view('index',compact('Cardata','prefectures'));
     }
 
@@ -81,6 +81,7 @@ class HomeController extends Controller
       $Classification = $HomeService->covertNull($request->Classification);
       $Distinction = $HomeService->covertNull($request->Distinction);
       $Mainnumber = $HomeService->checkNumber($request->Mainnumber);
+      $maskednumber = $HomeService->maskNumber($request->Mainnumber);
       $Color = $request->Color;
       $Bland = $request->Bland;
       $Prefecture_city = $request->Prefecture_city;
@@ -109,6 +110,7 @@ class HomeController extends Controller
       $request->session()->put('body_type',$body_type);
       $request->session()->put('text',$text);
       $request->session()->put('tests',$filepath);
+      $request->session()->put('maskednumber',$maskednumber);
 
       if($filepath !==null){
         $request->session()->put('carimg',$filepath);
@@ -129,7 +131,8 @@ class HomeController extends Controller
       $post->Prefecture_city = $request->session()->get('Prefecture_city');
       $post->bodytype = $request->session()->get('body_type');
       $post->text = $request->session()->get('text');
-       $user_ip = $_SERVER["REMOTE_ADDR"];
+      $post->maskednumber = $request->session()->get('maskednumber');
+      $user_ip = $_SERVER["REMOTE_ADDR"];
       $post->user_ip = $user_ip;
       $post->car_img = $request->session()->get('carimg');
         if($post->save()){

@@ -89,6 +89,7 @@
                     <input type="hidden" name="bodytype" value="{{$CarData['body_type']}}">
                     <input type="hidden" name="Prefecture_city" value="{{$CarData['Prefecture_city']}}">
                     <input type="hidden" name="text" value="{{$CarData['text']}}">
+                    <input type="hidden" name="maskednumber" value="{{$CarData['maskednumber']}}">
                     <input type="submit" name="" value="送信">
                   </form>
                 </div>

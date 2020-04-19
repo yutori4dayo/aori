@@ -294,7 +294,7 @@
                     @endif
                     <li class="list-item plate Classification1">@if($item->Classification === NULL){{ '不明'}}@else{{ $item->Classification}}@endif</li>
                     <li class="list-item plate Distinction1">@if($item->Distinction === NULL){{ '不明'}}@else{{ $item->Distinction}}@endif</li>
-                    <li class="list-item plate Mainnumber1">{{$item->Mainnumber}}</li>
+                    <li class="list-item plate Mainnumber1">{{$item->maskednumber}}</li>
                   </ul>
                 </div>
                 <ul class="list header_list">
@@ -331,6 +331,11 @@
             </div>
           </section>
           @endforeach
+          <div class="PaginateBox">
+            <div class="Paginateinner">
+                    {{ $Cardata->links() }}
+            </div>
+          </div>
         </div>
       </div>
     </div>

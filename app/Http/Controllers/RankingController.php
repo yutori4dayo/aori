@@ -14,6 +14,7 @@ class RankingController extends Controller
       $place_rankings = Place::orderBy('count', 'desc')->take(10)->get();
       foreach ($place_rankings as $place_ranking) {
         $place[] =$place_ranking->name;
+        $placeId[] =$place_ranking->id;
         $placecount[] = $place_ranking->count;
       }
       $brand_rankings = Brand::orderBy('count', 'desc')->take(10)->get();
@@ -31,6 +32,6 @@ class RankingController extends Controller
         $region[] =$region_ranking->name;
         $regioncount[] = $region_ranking->count;
       }
-      return view('placeranking',compact('place','brand','bodytype','placecount','brandcount','bodytypecount','region','regioncount'));
+      return view('placeranking',compact('place','brand','bodytype','placecount','brandcount','bodytypecount','region','regioncount','placeId'));
     }
 }

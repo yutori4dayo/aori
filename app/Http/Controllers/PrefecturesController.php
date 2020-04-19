@@ -23,19 +23,19 @@ class PrefecturesController extends Controller
 
   public function serchcardata(Request $request){
     $prefectures = Prefectures::all();
-    $Cardata =  Post::where('Color',$request->Color)->where('Prefecture_city',$request->region)->orderBy('created_at','desc')->take(config('app.paginatecount'));
+    $Cardata =  Post::where('Color',$request->Color)->where('Prefecture_city',$request->region)->orderBy('created_at','desc')->simplePaginate(config('app.paginatecount'));
     return view('serchcardata',compact('Cardata','prefectures'));
   }
 
   public function serchcardata2(Request $request){
     $prefectures = Prefectures::all();
-    $Cardata =  Post::where('Bland',$request->Bland)->where('Prefecture_city',$request->region)->orderBy('created_at','desc')->take(config('app.paginatecount'));
+    $Cardata =  Post::where('Bland',$request->Bland)->where('Prefecture_city',$request->region)->orderBy('created_at','desc')->simplePaginate(config('app.paginatecount'));
     return view('serchcardata',compact('Cardata','prefectures'));
   }
 
   public function serchcardata3(Request $request){
     $prefectures = Prefectures::all();
-    $Cardata =  Post::where('bodytype',$request->bodytype)->where('Prefecture_city',$request->region)->orderBy('created_at','desc')->take(config('app.paginatecount'));
+    $Cardata =  Post::where('bodytype',$request->bodytype)->where('Prefecture_city',$request->region)->orderBy('created_at','desc')->simplePaginate(config('app.paginatecount'));
     return view('serchcardata',compact('Cardata','prefectures'));
   }
 
@@ -53,7 +53,7 @@ class PrefecturesController extends Controller
     }else {
       $number = substr_replace($request->car_number,'-',2,0);
     }
-    $Cardata = Post::where('Mainnumber',$number)->where('Prefecture_city',$request->region)->orderBy('created_at','desc')->take(config('app.paginatecount'));
+    $Cardata = Post::where('Mainnumber',$number)->where('Prefecture_city',$request->region)->orderBy('created_at','desc')->simplePaginate(config('app.paginatecount'));
     return view('serchcardata',compact('Cardata','prefectures'));
   }
 
@@ -69,7 +69,7 @@ class PrefecturesController extends Controller
      if(strlen($request->Mainnumber) === 3){
        $tests = substr_replace($request->Mainnumber,' ',1,0);
         $Cardatass = '• '.$tests;
-         $Cardata =  Post::where('Mainnumber',$Cardatass)->orderBy('created_at','desc')->get();
+         $Cardata =  Post::where('Mainnumber',$Cardatass)->orderBy('created_at','desc')->simplePaginate(config('app.paginatecount'));
          $prefectures = Prefectures::all();
          $brands = Brand::all();
          $bodytypes = BodyType::all();
@@ -78,16 +78,16 @@ class PrefecturesController extends Controller
      }elseif(strlen($request->Mainnumber) === 2){
        $tests = substr_replace($request->Mainnumber,' ',-2,0);
         $Cardatass = '• '.'•  '.$tests;
-        $Cardata =  Post::where('Mainnumber',$Cardatass)->orderBy('created_at','desc','brands','bodytypes')->get();
+        $Cardata =  Post::where('Mainnumber',$Cardatass)->orderBy('created_at','desc')->simplePaginate(config('app.paginatecount'));
         $prefectures = Prefectures::all();
         $brands = Brand::all();
         $bodytypes = BodyType::all();
         $count = count($Cardata);
-         return view('allsearch',compact('Cardata','prefectures','count'));
+         return view('allsearch',compact('Cardata','prefectures','count','brands','bodytypes'));
      }elseif(strlen($request->Mainnumber) === 1){
        $tests = substr_replace($request->Mainnumber,' ',-3,0);
        $Cardatass = '• '.'• '.' •'.$tests;
-        $Cardata =  Post::where('Mainnumber',$Cardatass)->orderBy('created_at','desc','brands','bodytypes')->get();
+        $Cardata =  Post::where('Mainnumber',$Cardatass)->orderBy('created_at','desc')->simplePaginate(config('app.paginatecount'));
         $prefectures = Prefectures::all();
         $brands = Brand::all();
         $bodytypes = BodyType::all();
@@ -95,7 +95,7 @@ class PrefecturesController extends Controller
          return view('allsearch',compact('Cardata','prefectures','count','brands','bodytypes'));
      }else {
        $Cardatass = substr_replace($request->Mainnumber,'-',2,0);
-        $Cardata =  Post::where('Mainnumber',$Cardatass)->orderBy('created_at','desc')->get();
+        $Cardata =  Post::where('Mainnumber',$Cardatass)->orderBy('created_at','desc')->simplePaginate(config('app.paginatecount'));
         $prefectures = Prefectures::all();
         $brands = Brand::all();
         $bodytypes = BodyType::all();
@@ -108,7 +108,7 @@ class PrefecturesController extends Controller
    ->where('Bland',$request->Bland)
    ->where('Color',$request->Color)
    ->where('bodytype',$request->bodytype)
-   ->orderBy('created_at','desc')->get();
+   ->orderBy('created_at','desc')->simplePaginate(config('app.paginatecount'));
    $count = count($Cardata);
    $prefectures = Prefectures::all();
      return view('allsearch',compact('Cardata','prefectures','count'));

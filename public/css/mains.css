@@ -18,6 +18,9 @@ body{
 .select2-container--default .select2-selection--single .select2-selection__rendered{
   line-height: 39px;
 }
+.RankingList{
+  border-bottom: 1px solid #ddd;
+}
 /* paginate */
 
 .page-item{
@@ -557,6 +560,7 @@ dt::before{
     width: 169px;
     height: 80px;
     padding-bottom: 5px;
+    margin-bottom: 3px;
   }
   .box{
     position: relative;
@@ -578,7 +582,7 @@ dt::before{
     top: 4px;
     left: 92px;
     z-index: 2;
-    font-size: 20px;
+    font-size: 18px;
   }
   .Distinction1{
     position: absolute;

@@ -64,4 +64,19 @@ class HomeService
     }
   }
 
+  public function maskNumber($val)
+  {
+    $numberStrlen = strlen($val);
+    if(strlen($val) === 3 || strlen($val) === 2 || strlen($val) === 4){
+      $trueLength =  $numberStrlen - 1;
+      $randTarget = mt_rand(0,$trueLength);
+      $result = substr_replace($val, '#',$randTarget,1);
+      return $this->checkNumber($result);
+    }elseif($numberStrlen === 1){
+      $tests = substr_replace($val,' ',-3,0);
+      return '• '.'• '.' •'.$tests;
+    }
+  }
+
+
 }
