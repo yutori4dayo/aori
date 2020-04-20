@@ -21,6 +21,9 @@ body{
 .RankingList{
   border-bottom: 1px solid #ddd;
 }
+#delete_key{
+  display: none;
+}
 /* paginate */
 
 .page-item{

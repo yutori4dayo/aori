@@ -3,18 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Place;
 use App\Brand;
 use App\BodyType;
 use App\Region;
+use App\Prefectures;
 
 class RankingController extends Controller
 {
     public function placeranking(){
-      $place_rankings = Place::orderBy('count', 'desc')->take(10)->get();
+      $place_rankings = Prefectures::orderBy('count', 'desc')->take(10)->get();
       foreach ($place_rankings as $place_ranking) {
         $place[] =$place_ranking->name;
-        $placeId[] =$place_ranking->id;
+        $placeId[] =$place_ranking->code;
         $placecount[] = $place_ranking->count;
       }
       $brand_rankings = Brand::orderBy('count', 'desc')->take(10)->get();

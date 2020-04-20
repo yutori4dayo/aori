@@ -15,6 +15,7 @@ use App\BodyType;
 use App\Http\Services\HomeService;
 use Illuminate\Support\Facades\Input;
 use Intervention\Image\ImageManagerStatic as Image;
+use Illuminate\Support\Facades\Hash;
 
 class HomeController extends Controller
 {
@@ -36,8 +37,33 @@ class HomeController extends Controller
       $brands = Brand::all();
       $bodytypes = BodyType::all();
       $regions = Region::all();
-
       return view('post',compact('prefectures','brands','bodytypes','regions'));
+    }
+
+    public function deletePost(Request $request){
+      $postInfos =  Post::find($request->id);
+      if($request->delete_key){
+        if (Hash::check($request->delete_key, $postInfos->delete_key)) {
+            Post::where('id',$request->id)->delete();
+            $place = new Prefectures();
+            $place->where('name',$postInfos->Prefecture_city)->decrement('count',1);
+            $brand = new Brand();
+            $brand->where('name',$postInfos->Bland)->decrement('count',1);
+            $bodytype = new BodyType();
+            $bodytype->where('name',$postInfos->bodytype)->decrement('count',1);
+            $bodytype = new Region();
+            $bodytype->where('name',$postInfos->Region)->decrement('count',1);
+            return redirect('/')->with('flash_message', '削除されました。');
+        }else {
+          return redirect('/confirmDelete'.'/'.$request->id)->with('flash_message', '削除keyが違います');
+        }
+      }else {
+        return redirect('/confirmDelete'.'/'.$request->id)->with('flash_message', '削除keyが設定されていません');
+      }
+    }
+
+    public function confirmDelete($id){
+      return view('/confirmDelete',compact('id'));
     }
 
 
@@ -45,13 +71,14 @@ class HomeController extends Controller
     public function data(Request $request){
       $HomeService = new HomeService();
       $this->validate($request, [
-        'Prefecture_city' => 'required|string|max:8',
+        'Prefecture_city' => 'required',
         'Region' => 'nullable|string|max:4',
         'Classification' => 'nullable|digits_between:2,3',
         'Distinction' => 'nullable|regex:/^[あ-ん]+$/|max:1',
         'Mainnumber' => 'required|max:4',
         'text' => 'required|max:102',
         'car_img' => 'file|image|mimes:jpeg,png,jpg|max:2048',
+        'delete_key' => 'nullable|min:4',
       ]);
 
       if($request->car_img !== null){
@@ -88,18 +115,7 @@ class HomeController extends Controller
       $body_type = $request->bodytype;
       $text = $request->text;
 
-      $place = new Place();
-      $place->where('name',$request->Prefecture_city)->increment('count',1);
-
-      $brand = new Brand();
-      $brand->where('name',$Bland)->increment('count',1);
-
-      $bodytype = new BodyType();
-      $bodytype->where('name',$body_type)->increment('count',1);
-
-      $bodytype = new Region();
-      $bodytype->where('name',$Region)->increment('count',1);
-
+      $request->session()->put('delete_key',$request->delete_key);
       $request->session()->put('Region',$Region);
       $request->session()->put('Classification',$Classification);
       $request->session()->put('Distinction',$Distinction);
@@ -121,7 +137,22 @@ class HomeController extends Controller
 
 
     public function add(Request $request){
+      $place = new Prefectures();
+      $place->where('name',$request->session()->get('Prefecture_city'))->increment('count',1);
+
+      $brand = new Brand();
+      $brand->where('name',$request->session()->get('Bland'))->increment('count',1);
+
+      $bodytype = new BodyType();
+      $bodytype->where('name',$request->session()->get('body_type'))->increment('count',1);
+
+      $bodytype = new Region();
+      $bodytype->where('name',$request->session()->get('Region'))->increment('count',1);
+
+      $hased_key = Hash::make($request->session()->get('delete_key'));
+
       $post = new Post();
+      $post->delete_key = $hased_key;
       $post->Region = $request->session()->get('Region');
       $post->Classification = $request->session()->get('Classification');
       $post->Distinction = $request->session()->get('Distinction');
@@ -132,8 +163,7 @@ class HomeController extends Controller
       $post->bodytype = $request->session()->get('body_type');
       $post->text = $request->session()->get('text');
       $post->maskednumber = $request->session()->get('maskednumber');
-      $user_ip = $_SERVER["REMOTE_ADDR"];
-      $post->user_ip = $user_ip;
+      $post->user_ip = $_SERVER["REMOTE_ADDR"];
       $post->car_img = $request->session()->get('carimg');
         if($post->save()){
           $request->session()->flush();

@@ -111,6 +111,8 @@ class PrefecturesController extends Controller
    ->orderBy('created_at','desc')->simplePaginate(config('app.paginatecount'));
    $count = count($Cardata);
    $prefectures = Prefectures::all();
-     return view('allsearch',compact('Cardata','prefectures','count'));
+   $brands = Brand::all();
+   $bodytypes = BodyType::all();
+     return view('allsearch',compact('Cardata','prefectures','count','brands','bodytypes'));
  }
 }

@@ -151,7 +151,7 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-12 col-sm-6">
+                  <div class="col-12 col-md-6">
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">詳細<span class="PostSpan">(必須)</span></label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="text" placeholder="ナンバーや個人情報の記述は削除対象になります。100文字" value="text"></textarea>
@@ -163,6 +163,16 @@
                         </ul>
                       </div>
                     @endif
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12 col-md-6">
+                    <div class="">
+                      <div class="form-group">
+                        <label for="">削除key</label><span class="text-danger">　設定しない場合は投稿を削除できません。</span>
+                        <input type="number" class="form-control" id="exampleInputPassword1" name="delete_key" placeholder="４桁半角数字" value="{{ old('delete_key') }}">
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="row">

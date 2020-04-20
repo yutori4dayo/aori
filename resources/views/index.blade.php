@@ -2,6 +2,17 @@
   <body>
 @include('layouts.nav')
     <!-- Prefectures & SiteDescription -->
+
+    @if (session('flash_message'))
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <div class="flash_message text-danger">
+            {{ session('flash_message') }}
+        </div>
+        <button type="button" class="close" data-dismiss="alert" aria-label="閉じる">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    @endif
     <div class="container pt-3">
       <div class="row">
         <div class="col-sm-12 col-lg-8 right order-sm-2 order-2 order-lg-1">
@@ -245,7 +256,6 @@
     </div>
     <!-- /.Prefectures & SiteDescription -->
     <!-- latestPostData -->
-
     <div class="container mb-5 maincontainersp">
       <div class="row">
         <div class="col-12">
@@ -262,6 +272,14 @@
             <div class="SectionTitleBox d-flex">
               <h2 class="SectionTitle"><b>{{$item->Prefecture_city}}</b></h2>
               <time class="ml-auto">{{$item->created_at}}</time>
+              @if($item->delete_key)
+              <form class="" action="{{ action('HomeController@deletePost') }}" method="get" id="delete_key">
+                <input type="text" name="delete_key" value="">
+                <input type="hidden" name="id" value="{{$item->id}}">
+                <button type="submit" name="">送信</button>
+              </form>
+              <a href="{{action('HomeController@confirmDelete',$item->id)}}"><i class="far fa-trash-alt p-1"></i></a>
+              @endif
             </div>
             <div class="latestPostData">
               <div class="spbox">

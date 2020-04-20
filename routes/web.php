@@ -28,6 +28,8 @@ Route::get('/prefectures/{id}', 'PrefecturesController@pre0');
 Route::get('/', 'HomeController@index');
 
 Route::get('/post', 'HomeController@post');
+Route::post('/deletePost', 'HomeController@deletePost');
+Route::get('/confirmDelete/{id}','HomeController@confirmDelete');
 
 Route::get('/check', function(){
   return view('check');

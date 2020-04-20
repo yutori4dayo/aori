@@ -90,6 +90,7 @@ class RegionSeeder extends Seeder
           ['name' => '岡崎'],
           ['name' => '豊田'],
           ['name' => '尾張小牧'],
+          ['name' => '伊勢志摩']
           ['name' => '一宮'],
           ['name' => '春日井'],
           ['name' => '三重'],

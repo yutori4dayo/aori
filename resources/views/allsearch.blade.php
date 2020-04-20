@@ -119,6 +119,14 @@
         <div class="SectionTitleBox d-flex">
           <h2 class="SectionTitle"><b>{{$item->Prefecture_city}}</b></h2>
           <time class="ml-auto">{{$item->created_at}}</time>
+          @if($item->delete_key)
+          <form class="" action="{{ action('HomeController@deletePost') }}" method="get" id="delete_key">
+            <input type="text" name="delete_key" value="">
+            <input type="hidden" name="id" value="{{$item->id}}">
+            <button type="submit" name="">送信</button>
+          </form>
+          <a href="{{action('HomeController@confirmDelete',$item->id)}}"><i class="far fa-trash-alt p-1"></i></a>
+          @endif
         </div>
         <div class="latestPostData">
           <div class="spbox">

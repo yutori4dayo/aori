@@ -251,7 +251,7 @@
     <ul>
       <li class="d-flex RankingList"><img src="{{  asset('img/f3-1.png') }}" alt="" class="top3">　
         <div class="PreCountBox">
-          {{$region[0]}}　
+          {{$region[0]}}{{'ナンバー'}}　
           <div class="RankingCount">
             {{$regioncount[0]}}件
           </div>
@@ -259,7 +259,7 @@
       </li>
       <li class="d-flex RankingList"><img src="{{  asset('img/f3-2.png') }}" alt="" class="top3">　
         <div class="PreCountBox">
-          {{$region[1]}}　
+          {{$region[1]}}{{'ナンバー'}}　
           <div class="RankingCount">
             {{$regioncount[1]}}件
           </div>
@@ -267,7 +267,7 @@
       </li>
       <li class="d-flex RankingList"><img src="{{  asset('img/f3-3.png') }}" alt="" class="top3">　
         <div class="PreCountBox">
-          {{$region[2]}}　
+          {{$region[2]}}{{'ナンバー'}}　
           <div class="RankingCount">
             {{$regioncount[2]}}件
           </div>
@@ -275,7 +275,7 @@
       </li>
       <li class="d-flex RankingList"><span class="under">4位</span>　
         <div class="PreCountBox">
-          {{$region[3]}}　
+          {{$region[3]}}{{'ナンバー'}}　
           <div class="RankingCount">
             {{$regioncount[3]}}件
           </div>
@@ -283,7 +283,7 @@
       </li>
       <li class="d-flex RankingList"><span class="under">5位</span>　
         <div class="PreCountBox">
-          {{$region[4]}}　
+          {{$region[4]}}{{'ナンバー'}}　
           <div class="RankingCount">
             {{$regioncount[4]}}件
           </div>
@@ -291,7 +291,7 @@
       </li>
       <li class="d-flex RankingList"><span class="under">6位</span>　
         <div class="PreCountBox">
-          {{$region[5]}}　
+          {{$region[5]}}{{'ナンバー'}}　
           <div class="RankingCount">
             {{$regioncount[5]}}件
           </div>
@@ -299,7 +299,7 @@
       </li>
       <li class="d-flex RankingList"><span class="under">7位</span>　
         <div class="PreCountBox">
-          {{$region[6]}}　
+          {{$region[6]}}{{'ナンバー'}}　
           <div class="RankingCount">
             {{$regioncount[6]}}件
           </div>
@@ -307,7 +307,7 @@
       </li>
       <li class="d-flex RankingList"><span class="under">8位</span>　
         <div class="PreCountBox">
-          {{$region[7]}}　
+          {{$region[7]}}{{'ナンバー'}}　
           <div class="RankingCount">
             {{$regioncount[7]}}件
           </div>
@@ -315,7 +315,7 @@
       </li>
       <li class="d-flex RankingList"><span class="under">9位</span>　
         <div class="PreCountBox">
-          {{$region[8]}}　
+          {{$region[8]}}{{'ナンバー'}}　
           <div class="RankingCount">
             {{$regioncount[8]}}件
           </div>

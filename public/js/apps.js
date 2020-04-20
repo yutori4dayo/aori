@@ -15,3 +15,9 @@ function previewFile() {
     reader.readAsDataURL(file);
   }
 }
+
+$(function () {
+    $('#showbtn').on('click', () => {
+        $('#delete_key').show();
+    });
+});

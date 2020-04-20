@@ -32,7 +32,6 @@
                 </thead>
                 <tbody>
                 <tr>
-                  <img src="{{  asset('img/'.$CarData['tests']) }}" class="noimage">
                 <td>{{$CarData['Region']}}</td>
                 <td>{{$CarData['Classification']}}</td>
                 <td>{{$CarData['Distinction']}}</td>
@@ -49,6 +48,7 @@
                 <th class="check">ブランド</th>
                 <th class="check">ボディタイプ</th>
                 <th class="check">危険運転発生場所</th>
+                <th class="check text-danger">削除key</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -57,6 +57,7 @@
                 <td class="check">{{$CarData['Bland']}}</td>
                 <td class="check">{{$CarData['body_type']}}</td>
                 <td class="check">{{$CarData['Prefecture_city']}}</td>
+                <td class="check text-danger">{{$CarData['delete_key']}}</td>
                 </tr>
                 </tbody>
                 </table>
@@ -76,7 +77,11 @@
                 </tbody>
                 </table>
                 </div>
-
+                @if($CarData['tests'] === null)
+                 <img src="{{  asset('img/noimage.png') }}" class="" height="200">
+                @else
+                <img src="{{  asset('img/'.$CarData['tests']) }}" class="">
+                @endif
                 <div class="header_table mt-5">
                   <form class="" action="{{ url('/add')}}" method="post">
                     @csrf
@@ -90,6 +95,7 @@
                     <input type="hidden" name="Prefecture_city" value="{{$CarData['Prefecture_city']}}">
                     <input type="hidden" name="text" value="{{$CarData['text']}}">
                     <input type="hidden" name="maskednumber" value="{{$CarData['maskednumber']}}">
+                    <input type="hidden" name="delete_key" value="{{$CarData['delete_key']}}">
                     <input type="submit" name="" value="送信">
                   </form>
                 </div>
