@@ -29,9 +29,10 @@ class RankingController extends Controller
       }
       $region_rankings = Region::orderBy('count', 'desc')->take(10)->get();
       foreach ($region_rankings as $region_ranking) {
+        $code[] = $region_ranking->code;
         $region[] =$region_ranking->name;
         $regioncount[] = $region_ranking->count;
       }
-      return view('placeranking',compact('place','brand','bodytype','placecount','brandcount','bodytypecount','region','regioncount','placeId'));
+      return view('placeranking',compact('place','brand','bodytype','placecount','brandcount','bodytypecount','region','regioncount','placeId','code'));
     }
 }
