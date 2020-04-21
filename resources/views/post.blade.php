@@ -6,7 +6,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-12">
-            <h2 class="m-0">危険運転ナンバー登録</h1>
+            <h2 class="m-0">煽り運転ナンバー登録</h1>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -140,7 +140,7 @@
                     </div>
                     <div class="col-6 col-sm-4">
                       <div class="form-group">
-                        <label for="exampleSelect1exampleFormControlSelect1 blah">危険運転発生場所<span class="PostSpan blah">(必須)</span></label>
+                        <label for="exampleSelect1exampleFormControlSelect1 blah">煽り運転発生場所<span class="PostSpan blah">(必須)</span></label>
                         <select class="form-control" name="Prefecture_city" id="exampleFormControlSelect1">
                           @foreach($prefectures as $prefecture)
                           <option value="{{ $prefecture->name }}">{{ $prefecture->name }}</option>
