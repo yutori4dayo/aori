@@ -22,40 +22,76 @@ class PrefecturesController extends Controller
   }
 
   public function serchcardata(Request $request){
-    $prefectures = Prefectures::all();
-    $Cardata =  Post::where('Color',$request->Color)->where('Prefecture_city',$request->region)->orderBy('created_at','desc')->simplePaginate(config('app.paginatecount'));
-    return view('serchcardata',compact('Cardata','prefectures'));
+    if($request->fromRegionSearch !=="1"){
+      $prefectures = Prefectures::all();
+      $Cardata =  Post::where('Color',$request->Color)->where('Prefecture_city',$request->region)->orderBy('created_at','desc')->simplePaginate(config('app.paginatecount'));
+      return view('serchcardata',compact('Cardata','prefectures'));
+    }elseif($request->fromRegionSearch === "1"){
+      $prefectures = Prefectures::all();
+      $Cardata =  Post::where('Color',$request->Color)->where('Region',$request->region)->orderBy('created_at','desc')->simplePaginate(config('app.paginatecount'));
+      return view('serchcardata',compact('Cardata','prefectures'));
+    }
   }
 
   public function serchcardata2(Request $request){
-    $prefectures = Prefectures::all();
-    $Cardata =  Post::where('Bland',$request->Bland)->where('Prefecture_city',$request->region)->orderBy('created_at','desc')->simplePaginate(config('app.paginatecount'));
-    return view('serchcardata',compact('Cardata','prefectures'));
+    if($request->fromRegionSearch !=="1"){
+      $prefectures = Prefectures::all();
+      $Cardata =  Post::where('Bland',$request->Bland)->where('Prefecture_city',$request->region)->orderBy('created_at','desc')->simplePaginate(config('app.paginatecount'));
+      return view('serchcardata',compact('Cardata','prefectures'));
+    }elseif($request->fromRegionSearch ==="1"){
+      $prefectures = Prefectures::all();
+      $Cardata =  Post::where('Bland',$request->Bland)->where('Region',$request->region)->orderBy('created_at','desc')->simplePaginate(config('app.paginatecount'));
+      return view('serchcardata',compact('Cardata','prefectures'));
+    }
   }
 
   public function serchcardata3(Request $request){
-    $prefectures = Prefectures::all();
-    $Cardata =  Post::where('bodytype',$request->bodytype)->where('Prefecture_city',$request->region)->orderBy('created_at','desc')->simplePaginate(config('app.paginatecount'));
-    return view('serchcardata',compact('Cardata','prefectures'));
+    if($request->fromRegionSearch !=="1"){
+      $prefectures = Prefectures::all();
+      $Cardata =  Post::where('bodytype',$request->bodytype)->where('Prefecture_city',$request->region)->orderBy('created_at','desc')->simplePaginate(config('app.paginatecount'));
+      return view('serchcardata',compact('Cardata','prefectures'));
+    }elseif($request->fromRegionSearch ==="1"){
+      $prefectures = Prefectures::all();
+      $Cardata =  Post::where('bodytype',$request->bodytype)->where('Region',$request->region)->orderBy('created_at','desc')->simplePaginate(config('app.paginatecount'));
+      return view('serchcardata',compact('Cardata','prefectures'));
+    }
   }
 
   public function serchcardata4(Request $request){
-    $prefectures = Prefectures::all();
-    if(strlen($request->car_number) === 3){
-      $tests = substr_replace($request->car_number,' ',1,0);
-       $number = '• '.$tests;
-    }elseif(strlen($request->car_number) === 2){
-      $tests = substr_replace($request->car_number,' ',-2,0);
-       $number = '• '.'•  '.$tests;
-    }elseif(strlen($request->car_number) === 1){
-      $tests = substr_replace($request->car_number,' ',-3,0);
-      $number = '• '.'• '.' •'.$tests;
-    }else {
-      $number = substr_replace($request->car_number,'-',2,0);
-    }
-    $Cardata = Post::where('Mainnumber',$number)->where('Prefecture_city',$request->region)->orderBy('created_at','desc')->simplePaginate(config('app.paginatecount'));
-    return view('serchcardata',compact('Cardata','prefectures'));
+    if($request->fromRegionSearch !=="1"){
+      $prefectures = Prefectures::all();
+      if(strlen($request->car_number) === 3){
+        $tests = substr_replace($request->car_number,' ',1,0);
+         $number = '• '.$tests;
+      }elseif(strlen($request->car_number) === 2){
+        $tests = substr_replace($request->car_number,' ',-2,0);
+         $number = '• '.'•  '.$tests;
+      }elseif(strlen($request->car_number) === 1){
+        $tests = substr_replace($request->car_number,' ',-3,0);
+        $number = '• '.'• '.' •'.$tests;
+      }else {
+        $number = substr_replace($request->car_number,'-',2,0);
+      }
+      $Cardata = Post::where('Mainnumber',$number)->where('Prefecture_city',$request->region)->orderBy('created_at','desc')->simplePaginate(config('app.paginatecount'));
+      return view('serchcardata',compact('Cardata','prefectures'));
+    }elseif($request->fromRegionSearch ==="1"){
+        $prefectures = Prefectures::all();
+        if(strlen($request->car_number) === 3){
+          $tests = substr_replace($request->car_number,' ',1,0);
+           $number = '• '.$tests;
+        }elseif(strlen($request->car_number) === 2){
+          $tests = substr_replace($request->car_number,' ',-2,0);
+           $number = '• '.'•  '.$tests;
+        }elseif(strlen($request->car_number) === 1){
+          $tests = substr_replace($request->car_number,' ',-3,0);
+          $number = '• '.'• '.' •'.$tests;
+        }else {
+          $number = substr_replace($request->car_number,'-',2,0);
+        }
+        $Cardata = Post::where('Mainnumber',$number)->where('Region',$request->region)->orderBy('created_at','desc')->simplePaginate(config('app.paginatecount'));
+        return view('serchcardata',compact('Cardata','prefectures'));
   }
+}
 
  public function serchcardataall(){
    $prefectures = Prefectures::all();

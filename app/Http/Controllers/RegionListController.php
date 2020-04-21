@@ -24,7 +24,6 @@ class RegionListController extends Controller
       }
       $Cardata = Post::where('Region',$pre->name)->orderBy('created_at','desc')->simplePaginate(config('app.paginatecount'));
       $place = $pre->name;
-      // dd($place,$Cardata);
       return view('regions.region',compact('Cardata','place'));
     }
 }

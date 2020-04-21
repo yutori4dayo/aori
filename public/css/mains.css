@@ -670,6 +670,10 @@ dt::before{
   .PostSupplement{
     font-size: 10px;
   }
+
+  .Navtitle{
+    font-size: 1px;
+  }
 }
 
 @media (max-width: 422px){
