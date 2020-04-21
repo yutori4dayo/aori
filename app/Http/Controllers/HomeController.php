@@ -9,7 +9,6 @@ use App\News;
 use App\Prefectures;
 use App\NewsContents;
 use Carbon\Carbon;
-use App\Place;
 use App\Brand;
 use App\BodyType;
 use App\Http\Services\HomeService;
@@ -22,7 +21,9 @@ class HomeController extends Controller
     public function index(){
       $prefectures = Prefectures::all();
       $Cardata = Post::orderBy('created_at', 'desc')->simplePaginate(config('app.paginatecount'));
-      return view('index',compact('Cardata','prefectures'));
+      $HomeService = new HomeService();
+      $getFirstPlaceAll = $HomeService->getFirstPlaceAll();
+      return view('index',compact('Cardata','prefectures','getFirstPlaceAll'));
     }
 
     public function carimage(Request $request){
@@ -33,10 +34,8 @@ class HomeController extends Controller
     }
 
     public function post(){
-      $prefectures = Prefectures::all();
-      $brands = Brand::all();
-      $bodytypes = BodyType::all();
-      $regions = Region::all();
+      $HomeService = new HomeService();
+      list($prefectures,$brands,$bodytypes,$regions) = $HomeService->getallAll();
       return view('post',compact('prefectures','brands','bodytypes','regions'));
     }
 
@@ -45,14 +44,9 @@ class HomeController extends Controller
       if($request->delete_key){
         if (Hash::check($request->delete_key, $postInfos->delete_key)) {
             Post::where('id',$request->id)->delete();
-            $place = new Prefectures();
-            $place->where('name',$postInfos->Prefecture_city)->decrement('count',1);
-            $brand = new Brand();
-            $brand->where('name',$postInfos->Bland)->decrement('count',1);
-            $bodytype = new BodyType();
-            $bodytype->where('name',$postInfos->bodytype)->decrement('count',1);
-            $bodytype = new Region();
-            $bodytype->where('name',$postInfos->Region)->decrement('count',1);
+
+            $HomeService = new HomeService();
+            $HomeService->decrementAllCount($postInfos->Prefecture_city,$postInfos->Bland,$postInfos->bodytype,$postInfos->Region);
             return redirect('/')->with('flash_message', '削除されました。');
         }else {
           return redirect('/confirmDelete'.'/'.$request->id)->with('flash_message', '削除keyが違います');
@@ -69,7 +63,7 @@ class HomeController extends Controller
 
 
     public function data(Request $request){
-      $HomeService = new HomeService();
+
       $this->validate($request, [
         'Prefecture_city' => 'required',
         'Region' => 'nullable|string|max:4',
@@ -82,28 +76,14 @@ class HomeController extends Controller
       ]);
 
       if($request->car_img !== null){
-      $extension = $request->file('car_img')->getClientOriginalName();
-      $result = $request->file('car_img');
-      $big = Image::make($result);
-      $widths = 800;
-      $heights = 700;
-      $big->resize($widths, $heights);
-      $big->blur(100);
-      $img = Image::make($result);
-      $width = 200;
-      $height = 100;
-      $img->resize($width, $height);
-      $img->blur(100);
-      $uniq = uniqid("img_").$extension;
-      $save_path = public_path('img/'.$uniq);
-      $save_paths = public_path('big/'.$uniq);
-      $filepath = $uniq;
-      $img->save($save_path);
-      $big->save($save_paths);
+        $extension = $request->file('car_img')->getClientOriginalName();
+        $result = $request->file('car_img');
+        $HomeService = new HomeService();
+        $filepath = $HomeService->saveImagePath($result,$extension);
       }else {
         $filepath = null;
       }
-
+      $HomeService = new HomeService();
       $Region  =  $HomeService->covertNull($request->Region);
       $Classification = $HomeService->covertNull($request->Classification);
       $Distinction = $HomeService->covertNull($request->Distinction);
@@ -136,19 +116,10 @@ class HomeController extends Controller
     }
 
 
+
     public function add(Request $request){
-      $place = new Prefectures();
-      $place->where('name',$request->session()->get('Prefecture_city'))->increment('count',1);
-
-      $brand = new Brand();
-      $brand->where('name',$request->session()->get('Bland'))->increment('count',1);
-
-      $bodytype = new BodyType();
-      $bodytype->where('name',$request->session()->get('body_type'))->increment('count',1);
-
-      $bodytype = new Region();
-      $bodytype->where('name',$request->session()->get('Region'))->increment('count',1);
-
+      $HomeService = new HomeService();
+      $HomeService->incrementAllCount($request->session()->get('Prefecture_city'),$request->session()->get('Bland'),$request->session()->get('body_type'),$request->session()->get('Region'));
       $hased_key = Hash::make($request->session()->get('delete_key'));
 
       $post = new Post();
@@ -170,5 +141,4 @@ class HomeController extends Controller
           return redirect('/');
         }
     }
-
 }

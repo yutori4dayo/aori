@@ -21,61 +21,61 @@
             <!-- /.col-md-6 -->
               <div class="FormBox">
                 <div class="header_table">
-                <table>
-                <thead>
-                <tr>
-                <th>地域名</th>
-                <th>分類番号</th>
-                <th>ひらがな</th>
-                <th>４桁数字</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                <td>{{$CarData['Region']}}</td>
-                <td>{{$CarData['Classification']}}</td>
-                <td>{{$CarData['Distinction']}}</td>
-                <td>{{$CarData['Mainnumber']}}</td>
-                </tr>
-                </tbody>
-                </table>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>地域名</th>
+                        <th>分類番号</th>
+                        <th>ひらがな</th>
+                        <th>４桁数字</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>{{$CarData['Region']}}</td>
+                        <td>{{$CarData['Classification']}}</td>
+                        <td>{{$CarData['Distinction']}}</td>
+                        <td>{{$CarData['Mainnumber']}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
                 <div class="header_table mt-5">
-                <table>
-                <thead>
-                <tr>
-                <th class="check">色</th>
-                <th class="check">ブランド</th>
-                <th class="check">ボディタイプ</th>
-                <th class="check">危険運転発生場所</th>
-                <th class="check text-danger">削除key</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                <td class="check">{{$CarData['Color']}}</td>
-                <td class="check">{{$CarData['Bland']}}</td>
-                <td class="check">{{$CarData['body_type']}}</td>
-                <td class="check">{{$CarData['Prefecture_city']}}</td>
-                <td class="check text-danger">{{$CarData['delete_key']}}</td>
-                </tr>
-                </tbody>
-                </table>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th class="check">色</th>
+                        <th class="check">ブランド</th>
+                        <th class="check">ボディタイプ</th>
+                        <th class="check">危険運転発生場所</th>
+                        <th class="check text-danger">削除key</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="check">{{$CarData['Color']}}</td>
+                        <td class="check">{{$CarData['Bland']}}</td>
+                        <td class="check">{{$CarData['body_type']}}</td>
+                        <td class="check">{{$CarData['Prefecture_city']}}</td>
+                        <td class="check text-danger">{{$CarData['delete_key']}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
 
                 <div class="header_table mt-5">
-                <table>
-                <thead>
-                <tr>
-                <th>補足事項</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                <td class="SiteDescription">{{$CarData['text']}}</td>
-                </tr>
-                </tbody>
-                </table>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>補足事項</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="SiteDescription">{{$CarData['text']}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
                 @if($CarData['tests'] === null)
                  <img src="{{  asset('img/noimage.png') }}" class="" height="200">

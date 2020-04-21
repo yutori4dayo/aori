@@ -2,42 +2,78 @@
 
 namespace App\Http\Services;
 
- use App\Post;
- use App\News;
- use App\NewsContents;
+use App\Post;
+use App\Region;
+use App\News;
+use App\Prefectures;
+use Carbon\Carbon;
+use App\Brand;
+use App\BodyType;
+use Intervention\Image\ImageManagerStatic as Image;
 
 class HomeService
 {
+  public function getFirstPlaceAll(){
+    $firstPlace['Pre'] = Prefectures::orderBy('count', 'desc')->first();
+    $firstPlace['Brand'] = Brand::orderBy('count', 'desc')->first();
+    $firstPlace['BodyType'] = BodyType::orderBy('count', 'desc')->first();
+    $firstPlace['Region'] = Region::orderBy('count', 'desc')->first();
+    return $firstPlace;
+  }
 
-  public function getNews()
-  {
-    $today = date("Y-m-d");
-    $firstday = News::latest()->first();
+  public function getallAll(){
+    $prefectures = Prefectures::all();
+    $brands = Brand::all();
+    $bodytypes = BodyType::all();
+    $regions = Region::all();
+    return [$prefectures,$brands,$bodytypes,$regions];
+  }
 
-    if($firstday->memory_time !== $today){
-      $todays = date("Y-m-d");
-      $news = new News();
-      $news->memory_time = $todays;
-      $news->save();
+  public function saveImagePath($val,$ext){
+    $big = Image::make($val);
+    $widths = 800;
+    $heights = 700;
+    $big->resize($widths, $heights);
+    $big->blur(100);
+    $img = Image::make($val);
+    $width = 200;
+    $height = 100;
+    $img->resize($width, $height);
+    $img->blur(100);
+    $uniq = uniqid("img_").$ext;
+    $save_path = public_path('img/'.$uniq);
+    $save_paths = public_path('big/'.$uniq);
+    $img->save($save_path);
+    $big->save($save_paths);
+    return $uniq;
+  }
 
-      $url = file_get_contents('https://newsapi.org/v2/everything?q=煽り運転&from='."$todays".'&sortBy=publishedAt&apiKey=98428a9836a74a99afb13134cba73d0a');
-      $json = json_decode($url,true);
-      $n =  count($json['articles']);
+  public function incrementAllCount($Prefecture_city,$Bland,$body_type,$Region){
+    $place = new Prefectures();
+    $place->where('name',$Prefecture_city)->increment('count',1);
 
-      for ($i=0; $i < $n; $i++) {
-        $title =$json['articles'][$i]['title'];
-        $url = $json['articles'][$i]['url'];
-        $published_at = $json['articles'][$i]['publishedAt'];
-        $published_ats = substr($published_at,0,10);
-        $firstday = News::latest()->first();
-        $new = new NewsContents();
-        $new->title = $title;
-        $new->url = $url;
-        $new->published_at = $published_ats;
-        $new->news_id = $firstday->id;
-        $new->save();
-      }
-    }
+    $brand = new Brand();
+    $brand->where('name',$Bland)->increment('count',1);
+
+    $bodytype = new BodyType();
+    $bodytype->where('name',$body_type)->increment('count',1);
+
+    $bodytype = new Region();
+    $bodytype->where('name',$Region)->increment('count',1);
+  }
+
+  public function decrementAllCount($Prefecture_city,$Bland,$body_type,$Region){
+    $place = new Prefectures();
+    $place->where('name',$Prefecture_city)->decrement('count',1);
+
+    $brand = new Brand();
+    $brand->where('name',$Bland)->decrement('count',1);
+
+    $bodytype = new BodyType();
+    $bodytype->where('name',$body_type)->decrement('count',1);
+
+    $bodytype = new Region();
+    $bodytype->where('name',$Region)->decrement('count',1);
   }
 
   public function covertNull($val)

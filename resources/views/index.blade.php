@@ -249,6 +249,10 @@
           <div class="Section_box">
           <h2 class="SectionTitleBox">煽り運転ニュース</h2>
           <div class="SiteDescription p-2">
+            <p>{{$getFirstPlaceAll['Pre']['name']}}</p>
+            <p>{{$getFirstPlaceAll['Brand']['name']}}</p>
+            <p>{{$getFirstPlaceAll['BodyType']['name']}}</p>
+            <p>{{$getFirstPlaceAll['Region']['name']}}</p>
           </div>
         </div>
         </div>
@@ -343,7 +347,7 @@
                   @else
                   <li class="Textlist"><a href="{{ action('HomeController@carimage', $item->id) }}"><img src="{{  asset('img/'.$item->car_img) }}" class="noimage"></a></li>
                   @endif
-                  <li class="list-item text_area">{{ $item->text}}</li>
+                  <li class="list-item text_area"><p>{{ $item->text}}</p></li>
                 </ul>
               </div>
             </div>

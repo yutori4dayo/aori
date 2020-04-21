@@ -44,6 +44,9 @@ Route::post('/data', 'HomeController@data');
 
 Route::post('/add', 'HomeController@add');
 
+Route::get('/regionlist', 'RegionListController@regionList');
+Route::get('/regions/{id}', 'RegionListController@getRegion');
+
 
 // ランキング$bodytype_rankings
 Route::get('placeranking', 'RankingController@placeranking');
