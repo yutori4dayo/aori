@@ -4,6 +4,13 @@
     <meta charset="utf-8">
     <meta name="description" content="危険運転や煽り運転をする車のナンバーを投稿が出来ます。煽り運転には暴行罪に該当することがあります、絶対にやめましょう。">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- twiiter -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@samuraiinu2"/>
+    <meta property="og:url" content="https://www.aoriunten.net/"/>
+    <meta property="og:title" content="危険運転ナンバー投稿" />
+    <meta property="og:description" content="危険運転や煽り運転をする車のナンバーを投稿が出来ます。煽り運転には暴行罪に該当することがあります、絶対にやめましょう。" />
+    <meta property="og:image" content="{{  asset('img/mainimage.png') }}" />
 
     <!-- select2 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
