@@ -1,5 +1,14 @@
 <html lang="ja">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164149557-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-164149557-1');
+    </script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="description" content="危険運転や煽り運転をする車のナンバーを投稿が出来ます。煽り運転には暴行罪に該当することがあります、絶対にやめましょう。">
