@@ -247,12 +247,12 @@
         </div>
         <div class="col-sm-12 col-lg-4 left order-sm-1 order-1 order-lg-2">
           <div class="Section_box">
-          <h2 class="SectionTitleBox">煽り運転ニュース</h2>
+          <h2 class="SectionTitleBox">ランキング　{{$dtNow}}</h2>
           <div class="SiteDescription p-2">
-            <p>{{$getFirstPlaceAll['Pre']['name']}}</p>
-            <p>{{$getFirstPlaceAll['Brand']['name']}}</p>
-            <p>{{$getFirstPlaceAll['BodyType']['name']}}</p>
-            <p>{{$getFirstPlaceAll['Region']['name']}}</p>
+            <p>ボディタイプ　1位:　{{$getFirstPlaceAll['BodyType']['name']}}　{{$getFirstPlaceAll['BodyType']['count']}}件</p>
+            <p>地域ナンバー　1位:　<a href="{{ action('RegionListController@getRegion', $getFirstPlaceAll['Region']['code'])  }}">{{$getFirstPlaceAll['Region']['name']}}{{'ナンバー'}}</a>　{{$getFirstPlaceAll['Region']['count']}}件</p>
+            <p>　　発生場所　1位:　<a href="{{ action('PrefecturesController@pre0',$getFirstPlaceAll['Pre']['code'] )  }}">{{$getFirstPlaceAll['Pre']['name']}}</a>　{{$getFirstPlaceAll['Pre']['count']}}件</p>
+            <p>　　ブランド　1位:　{{$getFirstPlaceAll['Brand']['name']}}　{{$getFirstPlaceAll['Brand']['count']}}件</p>
           </div>
         </div>
         </div>

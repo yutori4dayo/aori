@@ -23,7 +23,9 @@ class HomeController extends Controller
       $Cardata = Post::orderBy('created_at', 'desc')->simplePaginate(config('app.paginatecount'));
       $HomeService = new HomeService();
       $getFirstPlaceAll = $HomeService->getFirstPlaceAll();
-      return view('index',compact('Cardata','prefectures','getFirstPlaceAll'));
+      $dt = Carbon::now();
+      $dtNow = $dt->format('Y年m月d日 H時');
+      return view('index',compact('Cardata','prefectures','getFirstPlaceAll','dtNow'));
     }
 
     public function carimage(Request $request){

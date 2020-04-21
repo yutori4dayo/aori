@@ -17,6 +17,10 @@ p{
   border-left: 5px solid red;
   padding-left: 4px;
 }
+.SiteDescription > p{
+  padding-top: 5px;
+  border-bottom: 1px dashed red;
+}
 /* .wrap_section1{
   display: flex;
 } */
@@ -741,10 +745,21 @@ dt::before{
 .Classification1{
   font-size: 14px;
 }
+.SectionTitleBox{
+  font-size: 16px
+}
+.SiteDescription > p {
+  font-size: 15px;
+}
+.fa-trash-alt{
+  font-size: 15px;
+}
 }
 
 @media (max-width: 370px){
-
+ .SiteDescription > p {
+   font-size: 13px;
+ }
   .box{
     height: 60px;
     max-width: 120px;
