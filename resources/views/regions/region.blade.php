@@ -9,7 +9,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">{{$place.'ナンバー'}}：煽り運転ナンバー検索</h5>
+          <h5 class="modal-title" id="staticBackdropLabel">{{$place.'ナンバー'}}：あおり運転ナンバー検索</h5>
         </div>
         <div class="modal-body">
           <div class="container">

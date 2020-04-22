@@ -11,14 +11,14 @@
     </script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="description" content="危険運転や煽り運転をする車のナンバーを投稿が出来ます。煽り運転には暴行罪に該当することがあります、絶対にやめましょう。">
+    <meta name="description" content="危険運転やあおり運転をする車のナンバーを投稿が出来ます。あおり運転には暴行罪に該当することがあります、絶対にやめましょう。">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!-- twiiter -->
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:site" content="@samuraiinu2"/>
     <meta property="og:url" content="https://www.aoriunten.net/"/>
-    <meta property="og:title" content="危険運転ナンバー投稿" />
-    <meta property="og:description" content="危険運転や煽り運転をする車のナンバーを投稿が出来ます。煽り運転には暴行罪に該当することがあります、絶対にやめましょう。" />
+    <meta property="og:title" content="あおり運転ナンバー投稿" />
+    <meta property="og:description" content="各都道府県で発生した危険運転を投稿して共有できます。投稿された地域ナンバーやボディタイプ等でランキングも集計しています。" />
     <meta property="og:image" content="{{  asset('img/mainimage.png') }}" />
 
     <!-- select2 -->
@@ -28,7 +28,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ asset('css/mains.css') }}">
+    <link rel="stylesheet" href="{{ asset(' css/mains.css') }}">
     <script src="https://kit.fontawesome.com/c2064407e9.js"></script>
-    <title>煽り運転ナンバー投稿</title>
+    <title>あおり運転ナンバー投稿</title>
   </head>

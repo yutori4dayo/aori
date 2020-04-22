@@ -1,6 +1,6 @@
 <nav>
   <div class="TitleBox">
-    <h1>煽り運転ナンバー投稿</h1>
+    <h1>あおり運転ナンバー投稿</h1>
   </div>
   <ul id="globalNavUl" class="clearfix defaultWrap">
     <li class="headNav"><a href="/"><i class="fa fa-home"></i><br><span class="Navtitle">トップ</span></a></li>

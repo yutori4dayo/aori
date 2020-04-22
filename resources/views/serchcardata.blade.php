@@ -6,7 +6,7 @@
         <div class="col-12">
           <ul class="float-sm-right">
             <li class=""><a href="{{ url('/post') }}">
-                <button type="button" name="button" class="btn btn-danger">煽り運転ナンバーを投稿する</button>
+                <button type="button" name="button" class="btn btn-danger">あおり運転ナンバーを投稿する</button>
             </a></li>
           </ul>
         </div>

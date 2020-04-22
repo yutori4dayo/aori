@@ -47,7 +47,7 @@
                         <th class="check">色</th>
                         <th class="check">ブランド</th>
                         <th class="check">ボディタイプ</th>
-                        <th class="check">煽り運転発生場所</th>
+                        <th class="check">あおり運転発生場所</th>
                         <th class="check text-danger">削除key</th>
                       </tr>
                     </thead>
