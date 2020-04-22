@@ -12,6 +12,7 @@ use Carbon\Carbon;
 use App\Brand;
 use App\BodyType;
 use App\Http\Services\HomeService;
+use App\Http\Services\PostService;
 use Illuminate\Support\Facades\Input;
 use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Support\Facades\Hash;
@@ -96,6 +97,16 @@ class HomeController extends Controller
       $Prefecture_city = $request->Prefecture_city;
       $body_type = $request->bodytype;
       $text = $request->text;
+
+
+      $PostService = new PostService();
+      $data =  $PostService->continuousPostCheck($Mainnumber);
+
+      if($data['someday'] !== null){
+        if($data['today'] === $data['someday']){
+          return redirect('/')->with('Regulation_message', '連投できません。');;
+        }
+      }
 
       $request->session()->put('delete_key',$request->delete_key);
       $request->session()->put('Region',$Region);

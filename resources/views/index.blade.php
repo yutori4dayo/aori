@@ -13,6 +13,17 @@
         </button>
       </div>
     @endif
+    @if (session('Regulation_message'))
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <div class="flash_message text-danger">
+            {{ session('Regulation_message') }}
+        </div>
+        <button type="button" class="close" data-dismiss="alert" aria-label="閉じる">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    @endif
+
     <div class="container pt-3">
       <div class="row">
         <div class="col-sm-12 col-lg-8 right order-sm-2 order-2 order-lg-1">
