@@ -102,7 +102,7 @@ class HomeController extends Controller
       $PostService = new PostService();
       $data =  $PostService->continuousPostCheck($Mainnumber);
 
-      if($data['someday'] !== null){
+      if($data !== null){
         if($data['today'] === $data['someday']){
           return redirect('/')->with('Regulation_message', '連投できません。');;
         }
