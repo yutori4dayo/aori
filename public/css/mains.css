@@ -477,6 +477,13 @@ dt::before{
   padding-bottom: 5px;
 }
 
+.count::before{
+  content:'あと';
+}
+.count::after{
+  content:'文字';
+}
+
 .short{
   padding-right: 64px;
 }

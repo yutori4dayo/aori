@@ -280,7 +280,7 @@
             </a></li>
           </ul>
         </div>
-        <div class="alert alert-light" role="alert"> - 最新投稿 - <strong>5件</strong></div>
+        <div class="alert alert-light" role="alert"> - 投稿数 - <strong>{{$allCountPost}}件</strong></div>
         <div class="col-12">
           @foreach($Cardata as $item)
           <section class="Section_box">
