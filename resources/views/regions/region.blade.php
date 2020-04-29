@@ -1,4 +1,4 @@
-@extends('layouts.head')
+@extends('layouts.head',['regionname'=>$place.'ナンバー'])
 <body>
 @include('layouts.nav')
 

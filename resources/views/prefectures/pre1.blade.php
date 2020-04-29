@@ -1,4 +1,4 @@
-@extends('layouts.head')
+@extends('layouts.head',['pretitle' => $place])
 <body>
 @include('layouts.nav')
 

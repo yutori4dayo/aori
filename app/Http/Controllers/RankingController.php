@@ -33,6 +33,7 @@ class RankingController extends Controller
         $region[] =$region_ranking->name;
         $regioncount[] = $region_ranking->count;
       }
-      return view('placeranking',compact('place','brand','bodytype','placecount','brandcount','bodytypecount','region','regioncount','placeId','code'));
+      $ranking = 'あおり運転ランキング';
+      return view('placeranking',compact('place','brand','bodytype','placecount','brandcount','bodytypecount','region','regioncount','placeId','code','ranking'));
     }
 }
