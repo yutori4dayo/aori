@@ -22,11 +22,12 @@ class HomeController extends Controller
     public function index(){
       $prefectures = Prefectures::all();
       $Cardata = Post::orderBy('created_at', 'desc')->simplePaginate(config('app.paginatecount'));
+      $allCountPost = count(Post::all());
       $HomeService = new HomeService();
       $getFirstPlaceAll = $HomeService->getFirstPlaceAll();
       $dt = Carbon::now();
       $dtNow = $dt->format('Y年m月d日 H時');
-      return view('index',compact('Cardata','prefectures','getFirstPlaceAll','dtNow'));
+      return view('index',compact('Cardata','prefectures','getFirstPlaceAll','dtNow','allCountPost'));
     }
 
     public function carimage(Request $request){
