@@ -154,6 +154,7 @@
                   <div class="col-12 col-md-6">
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">詳細<span class="PostSpan">(必須)</span></label>
+                        <span class="count" style="display:block;color:#fff">100</span>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="text" placeholder="ナンバーや個人情報の記述は削除対象になります。100文字" value="text"></textarea>
                     </div>
                     @if ($errors->any())
