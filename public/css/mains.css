@@ -491,6 +491,10 @@ dt::before{
   padding-right: 15px;
 }
 
+.copyright{
+  margin: 0 auto;
+}
+
 
 @media screen and (max-width:1200px) {
 /* .container{
