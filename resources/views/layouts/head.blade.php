@@ -13,7 +13,7 @@
     <meta charset="utf-8">
     <meta name="description" content="危険運転やあおり運転をする車のナンバーを投稿が出来ます。あおり運転には暴行罪に該当することがあります、絶対にやめましょう。">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<!-- twiiter -->
+    <!-- twiiter -->
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:site" content="@samuraiinu2"/>
     <meta property="og:url" content="https://www.aoriunten.net/"/>

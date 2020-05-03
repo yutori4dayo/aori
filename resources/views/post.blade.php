@@ -31,7 +31,7 @@
                           <select class="form-control" name="Region" id="mySelect2">
                             <option value="不明">不明</option>
                             @foreach($regions as $region)
-                            <option value="{{$region->name}}" value="{{ old('Region') }}">{{$region->name}}</option>
+                            <option value="{{$region->name}}" value="{{ old('Region') }}" @if(old('Region')==$region->name) selected  @endif>{{$region->name}}</option>
                             @endforeach
                           </select>
                         </div>
@@ -99,16 +99,16 @@
                         <div class="form-group">
                           <label for="exampleSelect1exampleFormControlSelect1">色</label>
                           <select class="form-control" name="Color" id="exampleFormControlSelect1">
-                            <option value="不明">不明</option>
-                            <option value="白">白</option>
-                            <option value="黒">黒</option>
-                            <option value="銀">銀</option>
-                            <option value="青">青</option>
-                            <option value="赤">赤</option>
-                            <option value="茶">茶</option>
-                            <option value="灰">灰</option>
-                            <option value="黄">黄</option>
-                            <option value="緑">緑</option>
+                            <option value="不明" @if(old('Color')=='不明') selected  @endif>不明</option>
+                            <option value="白" @if(old('Color')=='白') selected  @endif>白</option>
+                            <option value="黒" @if(old('Color')=='黒') selected  @endif>黒</option>
+                            <option value="銀" @if(old('Color')=='銀') selected  @endif>銀</option>
+                            <option value="青" @if(old('Color')=='青') selected  @endif>青</option>
+                            <option value="赤" @if(old('Color')=='赤') selected  @endif>赤</option>
+                            <option value="茶" @if(old('Color')=='茶') selected  @endif>茶</option>
+                            <option value="灰" @if(old('Color')=='灰') selected  @endif>灰</option>
+                            <option value="黄" @if(old('Color')=='黄') selected  @endif>黄</option>
+                            <option value="緑" @if(old('Color')=='緑') selected  @endif>緑</option>
                             <option value="その他">その他</option>
                           </select>
                         </div>
@@ -118,9 +118,9 @@
                       <div class="form-group">
                         <label for="exampleSelect1exampleFormControlSelect1">ブランド</label>
                         <select class="form-control" name="Bland" id="exampleFormControlSelect2">
-                          <option value="不明">不明</option>
+                          <!-- <option value="不明">不明</option> -->
                           @foreach($brands as $brand)
-                          <option value="{{$brand->name}}">{{$brand->name}}</option>
+                          <option value="{{$brand->name}}" @if(old('Bland')==$brand->name) selected  @endif>{{$brand->name}}</option>
                           @endforeach
                         </select>
                       </div>
@@ -132,7 +132,7 @@
                           <select class="form-control" name="bodytype" id="exampleFormControlSelect3">
                             <option value="不明">不明</option>
                             @foreach($bodytypes as $bodytype)
-                            <option value="{{$bodytype->name}}">{{$bodytype->name}}</option>
+                            <option value="{{$bodytype->name}}" @if(old('bodytype')==$bodytype->name) selected  @endif>{{$bodytype->name}}</option>
                             @endforeach
                           </select>
                         </div>
@@ -143,7 +143,7 @@
                         <label for="exampleSelect1exampleFormControlSelect1 blah">あおり運転発生場所<span class="PostSpan blah">(必須)</span></label>
                         <select class="form-control" name="Prefecture_city" id="exampleFormControlSelect1">
                           @foreach($prefectures as $prefecture)
-                          <option value="{{ $prefecture->name }}">{{ $prefecture->name }}</option>
+                          <option value="{{ $prefecture->name }}" @if(old('Prefecture_city')==$prefecture->name) selected  @endif>{{ $prefecture->name }}</option>
                           @endforeach
                         </select>
                       </div>
@@ -155,7 +155,7 @@
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">詳細<span class="PostSpan">(必須)</span></label>
                         <span class="count" style="display:block;color:#fff">100</span>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="text" placeholder="ナンバーや個人情報の記述は削除対象になります。100文字" value="text"></textarea>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="text" placeholder="ナンバーや個人情報の記述は削除対象になります。100文字" value="text">{{ old('text') }}</textarea>
                     </div>
                     @if ($errors->any())
                       <div class="alert alert-danger">

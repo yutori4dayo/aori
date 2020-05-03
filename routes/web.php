@@ -11,19 +11,6 @@
 |
 */
 
-// Route::get('/index', 'HomeController@index');
-//
-// Route::get('/post', function () {
-//     return view('post');
-// });
-//
-//
-// Route::post('/check', 'HomeController@check');
-//
-// Route::post('/data', 'HomeController@data');
-//
-// Route::post('/add', 'HomeController@add');
-
 Route::get('/prefectures/{id}', 'PrefecturesController@pre0');
 Route::get('/', 'HomeController@index');
 
@@ -36,12 +23,11 @@ Route::get('/check', function(){
 });
 
 Route::post('/check', 'HomeController@add');
-// Route::get('/{image}', 'HomeController@carimage');
+
 Route::get('/image/{image}', 'HomeController@carimage');
 
 
 Route::post('/data', 'HomeController@data');
-
 Route::post('/add', 'HomeController@add');
 
 Route::get('/regionlist', 'RegionListController@regionList');
