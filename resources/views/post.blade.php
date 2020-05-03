@@ -35,7 +35,7 @@
                             @endforeach
                           </select>
                         </div>
-                        @if ($errors->any())
+                        @if ($errors->has('Region'))
                           <div class="alert alert-danger">
                             <ul>
                             <li>{{ $errors->first('Region') }}</li>
@@ -49,7 +49,7 @@
                         <label for="">②分類番号</label>
                         <input type="number" class="form-control" id="exampleInputPassword1" name="Classification" placeholder="500 「半角数字」" value="{{ old('Classification')}}">
                       </div>
-                      @if ($errors->any())
+                      @if ($errors->has('Classification'))
                         <div class="alert alert-danger">
                           <ul>
                           <li> {{ $errors->first('Classification') }}</li>
@@ -63,7 +63,7 @@
                           <label for="">③ひらがな</label>
                           <input type="text" class="form-control" id="exampleInputPassword1" name="Distinction" placeholder="さ 「全角ひらがな１文字」" value="{{ old('Distinction') }}">
                         </div>
-                        @if ($errors->any())
+                        @if ($errors->has('Distinction'))
                           <div class="alert alert-danger">
                             <ul>
                             <li> {{ $errors->first('Distinction') }}</li>
@@ -82,7 +82,7 @@
                         <label for="">④４桁数字<span class="PostSpan">(必須)</span></label>
                         <input type="text" class="form-control" id="exampleInputPassword1" name="Mainnumber" placeholder="1234 「ハイフンなし半角数字」" value="{{ old('Mainnumber') }}">
                       </div>
-                      @if ($errors->any())
+                      @if ($errors->has('Mainnumber'))
                         <div class="alert alert-danger">
                           <ul>
                           <li> {{ $errors->first('Mainnumber') }}</li>
@@ -157,7 +157,7 @@
                         <span class="count" style="display:block;color:#fff">100</span>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="text" placeholder="ナンバーや個人情報の記述は削除対象になります。100文字" value="text">{{ old('text') }}</textarea>
                     </div>
-                    @if ($errors->any())
+                    @if ($errors->has('text'))
                       <div class="alert alert-danger">
                         <ul>
                         <li>{{ $errors->first('text') }}</li>
