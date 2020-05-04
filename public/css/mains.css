@@ -495,6 +495,10 @@ dt::before{
   margin: 0 auto;
 }
 
+.accordion{
+  display: none;
+}
+
 
 @media screen and (max-width:1200px) {
 /* .container{
@@ -539,6 +543,16 @@ dt::before{
   .sp_hidden{
     display: none;
   }
+
+  .sp_hidden_super{
+    margin-right: 0!important;
+    display: none;
+  }
+
+  .accordion{
+    display: block;
+  }
+
   .latestPostData{
     display: block;
   }
