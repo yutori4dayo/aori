@@ -18,7 +18,13 @@
     <meta name="twitter:site" content="@samuraiinu2"/>
     <meta property="og:url" content="https://www.aoriunten.net/"/>
     <meta property="og:title" content="あおり運転ナンバー投稿" />
+    @if(isset($regionname))
+    <meta property="og:description" content="{{$regionname}}で発生した危険運転を投稿して共有できます。投稿された地域ナンバーやボディタイプ等でランキングも集計しています。" />
+    @elseif(isset($pretitle))
+    <meta property="og:description" content="{{$pretitle}}で発生した危険運転を投稿して共有できます。投稿された地域ナンバーやボディタイプ等でランキングも集計しています。" />
+    @else
     <meta property="og:description" content="各都道府県で発生した危険運転を投稿して共有できます。投稿された地域ナンバーやボディタイプ等でランキングも集計しています。" />
+    @endif
     <meta property="og:image" content="{{  asset('img/mainimage.png') }}" />
 
     <!-- select2 -->
