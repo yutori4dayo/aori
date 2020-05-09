@@ -144,7 +144,7 @@
                     </div>
                     <div class="col-12 col-sm-4">
                       <div class="form-group">
-                        <label for="exampleSelect1exampleFormControlSelect1 blah">あおり運転発生場所<span class="PostSpan blah">(必須)</span></label>
+                        <label for="exampleSelect1exampleFormControlSelect1">あおり運転発生場所<span class="PostSpan">(必須)</span></label>
                         <select class="form-control" name="Prefecture_city" id="mySelect4">
                           <option value="不明" @if(old('Prefecture_city')=='不明') selected  @endif>不明</option>
                           @foreach($prefectures as $prefecture)
@@ -176,7 +176,7 @@
                   <div class="col-12 col-md-6">
                     <div class="">
                       <div class="form-group">
-                        <label for="">削除key</label><span class="text-danger">　設定しない場合は投稿を削除できません。</span>
+                        <label for="">削除key</label><small class="text-danger">　設定しない場合は投稿を削除できません。</small>
                         <input type="number" class="form-control" id="exampleInputPassword1" name="delete_key" placeholder="４桁半角数字" value="{{ old('delete_key') }}">
                       </div>
                     </div>
