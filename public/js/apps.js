@@ -1,6 +1,18 @@
 $(document).ready(function() {
   $("#mySelect2").select2();
 });
+$(document).ready(function() {
+  $("#mySelect").select2();
+});
+$(document).ready(function() {
+  $("#mySelect1").select2();
+});
+$(document).ready(function() {
+  $("#mySelect3").select2();
+});
+$(document).ready(function() {
+  $("#mySelect4").select2();
+});
 
 function previewFile() {
   const preview = document.querySelector('#target');

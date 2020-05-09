@@ -501,10 +501,6 @@ dt::before{
 
 
 @media screen and (max-width:1200px) {
-/* .container{
-  padding-left: 0!important;
-  padding-right: 0!important;
-} */
 .right_p{
   padding-left: 5px;
 }
