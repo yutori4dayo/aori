@@ -378,6 +378,9 @@
               </div>
             </div>
           </section>
+          @if($loop->iteration === 5)
+           test
+          @endif
           @endforeach
           <div class="PaginateBox">
             <div class="Paginateinner">
