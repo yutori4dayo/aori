@@ -5,6 +5,9 @@
        <div class="card">
          <div class="card-header">
            <h3 class="card-title">メインループ</h3>
+           <div class="container">
+             <button type="button" name="button" class="btn btn-danger"><a href="{{action('ManagerController@afi')}}" class="text-light">広告</a></button>
+           </div>
          </div>
          <!-- /.card-header -->
          <div class="card-body">
@@ -28,7 +31,7 @@
                  <td>{{$post->maskednumber}}</td>
                  <td>{{$post->text}}</td>
                  <td>
-                   <form class="" action="{{action( 'ManagerController@delete',$post->id )}}" method="get">
+                   <form class="m-0" action="{{action( 'ManagerController@delete',$post->id )}}" method="get">
                      @csrf
                      <input type="hidden" name="delete" value="{{$post->id}}">
                      <button type="submit" name="" class="btn btn-danger">削除</button>
@@ -40,13 +43,4 @@
            </table>
          </div>
          <!-- /.card-body -->
-         <div class="card-footer clearfix">
-           <ul class="pagination pagination-sm m-0 float-right">
-             <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
-             <li class="page-item"><a class="page-link" href="#">1</a></li>
-             <li class="page-item"><a class="page-link" href="#">2</a></li>
-             <li class="page-item"><a class="page-link" href="#">3</a></li>
-             <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
-           </ul>
-         </div>
        </div>

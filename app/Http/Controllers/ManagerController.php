@@ -6,6 +6,9 @@ use App\Post;
 
 use Illuminate\Http\Request;
 use App\Http\Services\HomeService;
+use Illuminate\Support\Facades\Input;
+use Intervention\Image\ImageManagerStatic as Image;
+use Illuminate\Support\Facades\Hash;
 
 class ManagerController extends Controller
 {
@@ -15,7 +18,7 @@ class ManagerController extends Controller
 
     public function check(Request $request){
       if($request->email === config('app.email') && $request->password === config('app.password')){
-        $posts = Post::all();
+        $posts = Post::orderBy('created_at', 'desc')->simplePaginate(config('app.paginatecount'));
         return view('admin.home',compact('posts'));
       }else {
         return redirect('/');
@@ -23,12 +26,15 @@ class ManagerController extends Controller
     }
 
     public function delete($id){
-      //$items = Post::where('id',$id)->get();
       $item = Post::find($id);
       $HomeService = new HomeService();
       $HomeService->decrementAllCount($item->Prefecture_city,$item->Bland,$item->bodytype,$item->Region);
       Post::where('id',$id)->delete();
-      $posts = Post::all();
+      $posts = Post::orderBy('created_at', 'desc')->simplePaginate(config('app.paginatecount'));
       return view('admin.home',compact('posts'));
+    }
+
+    public function afi(){
+      return view('admin.afi');
     }
 }
