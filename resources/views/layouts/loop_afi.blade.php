@@ -1,12 +1,19 @@
 <div class="loopAfiWrapper_pc d-flex">
   <div class="loopAfiBox">
-    {!! $title[0]['url'] !!}
+    @if(isset($title[0]['url']))
+      {!! $title[0]['url'] !!}
+    @endif
+
   </div>
   <div class="loopAfiBox">
-    {!! $title[1]['url'] !!}
+    @if(isset($title[1]['url']))
+      {!! $title[1]['url'] !!}
+    @endif
   </div>
   <div class="loopAfiBox">
-    {!! $title[2]['url'] !!}
+    @if(isset($title[2]['url']))
+      {!! $title[2]['url'] !!}
+    @endif
   </div>
   <div class="loopAfiBox">
 

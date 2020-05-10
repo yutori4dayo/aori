@@ -57,9 +57,9 @@
     </div>
   </div>
 <div class="tab-pane" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-  <form class="" action="{{ action('ManagerController@afiliate')}}" method="post">
+  <form class="" action="{{ action('ManagerController@afiliate')}}" method="post" name='hidden_post'>
     @csrf
-    <button type="submit" class="btn btn-primary">新規作成</button>
+    <a href="javascript:hidden_post.submit()">リンク名</a>
   </form>
 
   <div class="container-fluid">

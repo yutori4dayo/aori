@@ -37,7 +37,6 @@ class ManagerController extends Controller
         $banners = Affiliate::orderBy('created_at', 'desc')->simplePaginate(config('app.paginatecount'));
         return view('admin.home',compact('posts','banners'));
       }elseif($request->type === "2"){
-        $banner = Affiliate::find($request->id);
         Affiliate::where('id',$request->id)->delete();
         $posts = Post::orderBy('created_at', 'desc')->simplePaginate(config('app.paginatecount'));
         $banners = Affiliate::orderBy('created_at', 'desc')->simplePaginate(config('app.paginatecount'));
@@ -47,7 +46,6 @@ class ManagerController extends Controller
 
     public function afi(Request $request){
       if($request->type === null){
-        $Affiliate = new Affiliate();
         $posts = Post::orderBy('created_at', 'desc')->simplePaginate(config('app.paginatecount'));
         $banners = Affiliate::orderBy('created_at', 'desc')->simplePaginate(config('app.paginatecount'));
         return view('admin.home',compact('posts','banners'));
