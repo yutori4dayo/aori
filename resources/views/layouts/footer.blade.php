@@ -2,7 +2,7 @@
   $thisyear =date('Y');
 @endphp
 <div class="copyright text-center pb-3">
-  <small>&copy; 2020-{{$thisyear}}  All Rights Reserved.<a href="https://twitter.com/aoriuntennet">@aoriuntennet</a></small>
+  <small><a href="{{ action('ManagerController@login')  }}" id='admin'>&copy; 2020-{{$thisyear}}  All Rights Reserved.</a><a href="https://twitter.com/aoriuntennet">@aoriuntennet</a></small>
 </div>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

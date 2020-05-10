@@ -499,6 +499,14 @@ dt::before{
   display: none;
 }
 
+#admin{
+  color: inherit;
+  cursor: default;
+}
+#admin:hover{
+  text-decoration: none!important
+}
+
 
 @media screen and (max-width:1200px) {
 .right_p{
