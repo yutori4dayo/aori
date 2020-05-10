@@ -22,12 +22,11 @@ class HomeController extends Controller
     public function index(){
       $prefectures = Prefectures::all();
       $Cardata = Post::orderBy('created_at', 'desc')->simplePaginate(config('app.paginatecount'));
-      $allCountPost = count(Post::all());
       $HomeService = new HomeService();
       $getFirstPlaceAll = $HomeService->getFirstPlaceAll();
       $dt = Carbon::now();
       $dtNow = $dt->format('Y年m月d日 H時');
-      return view('index',compact('Cardata','prefectures','getFirstPlaceAll','dtNow','allCountPost'));
+      return view('index',compact('Cardata','prefectures','getFirstPlaceAll','dtNow'));
     }
 
     public function carimage(Request $request){
@@ -103,7 +102,7 @@ class HomeController extends Controller
       $PostService = new PostService();
       $data =  $PostService->continuousPostCheck($Mainnumber);
 
-      if($data !== null){
+      if($data['someday'] !== null){
         if($data['today'] === $data['someday']){
           return redirect('/')->with('Regulation_message', '連投できません。');;
         }
