@@ -14,12 +14,12 @@
            <table class="table table-bordered">
              <thead>
                <tr>
-                 <th style="width: 10px">#</th>
-                 <th style="width: 10px">地域</th>
-                 <th style="width: 10px">ナンバー</th>
-                 <th style="width: 10px">表示ナンバー</th>
-                 <th style="width: 10px">テキスト</th>
-                 <th style="width: 100px">削除</th>
+                 <th style="width: 5%">#</th>
+                 <th style="width: 5%">地域</th>
+                 <th style="width: 10%">ナンバー</th>
+                 <th style="width: 15%">表示ナンバー</th>
+                 <th style="width: 55%">テキスト</th>
+                 <th style="width: 10%">削除</th>
                </tr>
              </thead>
              @foreach ($posts as $post)
