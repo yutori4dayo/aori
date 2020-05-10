@@ -507,6 +507,11 @@ dt::before{
   text-decoration: none!important
 }
 
+/* アフィリエイト */
+.table td{
+  vertical-align: baseline;
+}
+
 
 @media screen and (max-width:1200px) {
 .right_p{
