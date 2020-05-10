@@ -3,6 +3,7 @@
 namespace App\Http\Services;
 
 use App\Post;
+use App\Affiliate;
 use App\Region;
 use App\News;
 use App\Prefectures;
@@ -112,6 +113,12 @@ class HomeService
       $tests = substr_replace($val,' ',-3,0);
       return '• '.'• '.' •'.$tests;
     }
+  }
+
+  public function getAfis()
+  {
+    $section1 = Affiliate::where('sectionFlg',1)->get();
+    return $section1;
   }
 
 

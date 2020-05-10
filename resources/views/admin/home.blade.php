@@ -1,6 +1,6 @@
 @include('layouts.head')
 
-<nav>
+<nav class="mb-0 mx-5 mt-5">
   <div class="nav nav-tabs" id="nav-tab" role="tablist">
     <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">ホーム</a>
     <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">プロフィール</a>
@@ -59,7 +59,7 @@
 <div class="tab-pane" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
   <form class="" action="{{ action('ManagerController@afiliate')}}" method="post">
     @csrf
-    <button type="submit" name="btn btn-danger">送信</button>
+    <button type="submit" class="btn btn-primary">新規作成</button>
   </form>
 
   <div class="container-fluid">

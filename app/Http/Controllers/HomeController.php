@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Affiliate;
 use App\Post;
 use App\Region;
 use App\News;
@@ -23,10 +24,11 @@ class HomeController extends Controller
       $prefectures = Prefectures::all();
       $Cardata = Post::orderBy('created_at', 'desc')->simplePaginate(config('app.paginatecount'));
       $HomeService = new HomeService();
+      $afi1 = $HomeService->getAfis();
       $getFirstPlaceAll = $HomeService->getFirstPlaceAll();
       $dt = Carbon::now();
       $dtNow = $dt->format('Y年m月d日 H時');
-      return view('index',compact('Cardata','prefectures','getFirstPlaceAll','dtNow'));
+      return view('index',compact('Cardata','prefectures','getFirstPlaceAll','dtNow','afi1'));
     }
 
     public function carimage(Request $request){
