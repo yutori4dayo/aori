@@ -47,3 +47,6 @@ Route::post('/serchcardata4', 'PrefecturesController@serchcardata4');
 
 Route::get('/allsearch', 'PrefecturesController@serchcardataall');
 Route::post('/all', 'PrefecturesController@allsearchs');
+
+Route::get('/login', 'ManagerController@login');
+Route::get('/check', 'ManagerController@check');
