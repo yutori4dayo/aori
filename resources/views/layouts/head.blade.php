@@ -33,10 +33,15 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/css/select2.min.css" rel="stylesheet">
     <script defer="defer" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js"></script>
 
+    <!-- fontawesome -->
+    <link href="{{ asset('css/fontawesome.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('css/all.css')}}" rel="stylesheet">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/mains.css') }}">
-    <script src="https://kit.fontawesome.com/c2064407e9.js"></script>
+
+    {{-- <script src="https://kit.fontawesome.com/c2064407e9.js"></script> --}}
 
     <title>
       @if(isset($regionname))
