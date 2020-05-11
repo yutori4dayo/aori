@@ -512,6 +512,17 @@ dt::before{
   vertical-align: baseline;
 }
 
+.loopAfiWrapper_pc{
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.loopAfiBox_tab{
+  display: none;
+}
+.loopAfiBox_SP{
+  display: none;
+}
+
 
 @media screen and (max-width:1200px) {
 .right_p{
@@ -546,11 +557,20 @@ dt::before{
 .SizeChange{
   font-size: 15px!important;
 }
+.hiden1080{
+  display: none;
+}
 }
 
 @media screen and (max-width:990px) {
+  .defultPC{
+    display: none;
+  }
   .sp_hidden{
     display: none;
+  }
+  .loopAfiBox_SP{
+    display: block;
   }
 
   .sp_hidden_super{
@@ -581,6 +601,9 @@ dt::before{
   }
 .bigimage{
   width: 90%;
+}
+.loopAfiBox_tab{
+  display: block;
 }
 }
 

@@ -89,7 +89,7 @@
                    <td>{{$banner->name}}</td>
                    <td>{!! $banner->url !!}</td>
                    <td>{{$banner->size}}</td>
-                   <td>{{$banner->sectionFlg}}</td>
+                   <td>@if($banner->sectionFlg === "1")メインループ@endif</td>
                    <td>
                      <form class="m-0" action="{{action( 'ManagerController@delete',$banner->id)}}" method="get">
                        @csrf

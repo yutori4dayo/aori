@@ -19,6 +19,7 @@
                 <label for="exampleSelect1exampleFormControlSelect1">サイズ</label>
                 <select class="form-control" name="size" id="mySelect">
                   <option value="128">128*128</option>
+                  <option value="80">80*80</option>
                 </select>
               </div>
             </div>
@@ -26,7 +27,8 @@
               <div class="form-group">
                 <label for="exampleSelect1exampleFormControlSelect1">セクション</label>
                 <select class="form-control" name="sectionFlg" id="mySelect">
-                  <option value="1">メインループ</option>
+                  <option value="1">メインループUP</option>
+                  <option value="2">メインループDOWN</option>
                 </select>
               </div>
             </div>

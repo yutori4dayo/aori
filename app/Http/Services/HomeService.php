@@ -117,8 +117,9 @@ class HomeService
 
   public function getAfis()
   {
-    $section1 = Affiliate::where('sectionFlg',1)->get();
-    return $section1;
+    $section1 = Affiliate::where('sectionFlg',1)->where('size','128')->get();
+    $section2 = Affiliate::where('sectionFlg',1)->where('size','80')->get();
+    return [$section1,$section2];
   }
 
 
