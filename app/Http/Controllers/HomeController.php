@@ -101,14 +101,14 @@ class HomeController extends Controller
       $text = $request->text;
 
 
-      $PostService = new PostService();
-      $data =  $PostService->continuousPostCheck($Mainnumber);
-
-      if($data['someday'] !== null){
-        if($data['today'] === $data['someday']){
-          return redirect('/')->with('Regulation_message', '連投できません。');;
-        }
-      }
+      // $PostService = new PostService();
+      // $data =  $PostService->continuousPostCheck($Mainnumber);
+      //
+      // if($data['someday'] !== null){
+      //   if($data['today'] === $data['someday']){
+      //     return redirect('/')->with('Regulation_message', '連投できません。');
+      //   }
+      // }
 
       $request->session()->put('delete_key',$request->delete_key);
       $request->session()->put('Region',$Region);
