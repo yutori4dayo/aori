@@ -1,7 +1,7 @@
 @php
     $randomPcUp = range(1,$count128);
     shuffle($randomPcUp);
-    $randomSpUp = range(1,5);
+    $randomSpUp = range(1,$count80);
     shuffle($randomSpUp);
 @endphp
 <div class="loopAfiWrapper_pc d-flex">
@@ -53,28 +53,28 @@
     @if(isset($mainLoopSpUp[$randomSpUp[1]]['url']))
       {!! $mainLoopSpUp[$randomSpUp[1]]['url'] !!}
     @else
-    {!! $mainLoopSpUp[$randomSpUp[1]]['url'] !!}
+    {!! $mainLoopSpUp[$randomSpUp[0]]['url'] !!}
     @endif
   </div>
   <div class="loopAfiBox_SP">
     @if(isset($mainLoopSpUp[$randomSpUp[2]]['url']))
       {!! $mainLoopSpUp[$randomSpUp[2]]['url'] !!}
       @else
-        {!! $mainLoopSpUp[$randomSpUp[2]]['url'] !!}
+        {!! $mainLoopSpUp[$randomSpUp[0]]['url'] !!}
     @endif
   </div>
   <div class="loopAfiBox_SP">
     @if(isset($mainLoopSpUp[$randomSpUp[3]]['url']))
       {!! $mainLoopSpUp[$randomSpUp[3]]['url'] !!}
       @else
-        {!! $mainLoopSpUp[$randomSpUp[3]]['url'] !!}
+        {!! $mainLoopSpUp[$randomSpUp[0]]['url'] !!}
     @endif
   </div>
   <div class="loopAfiBox_SP">
     @if(isset($mainLoopSpUp[$randomSpUp[4]]['url']))
       {!! $mainLoopSpUp[$randomSpUp[4]]['url'] !!}
       @else
-        {!! $mainLoopSpUp[$randomSpUp[4]]['url'] !!}
+        {!! $mainLoopSpUp[$randomSpUp[0]]['url'] !!}
     @endif
   </div>
 
