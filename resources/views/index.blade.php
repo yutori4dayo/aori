@@ -379,7 +379,7 @@
             </div>
           </section>
           @if($loop->iteration === 5)
-            @include('layouts.loop_afi',['mainLoopPcUp' => $mainLoopPcUp,'mainLoopSpUp'=> $mainLoopSpUp ])
+            @include('layouts.loop_afi',['mainLoopPcUp' => $mainLoopPcUp,'mainLoopSpUp'=> $mainLoopSpUp,'count128' => $count128,'count80'=>$count80])
           @endif
           @endforeach
           <div class="PaginateBox">

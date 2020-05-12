@@ -118,8 +118,10 @@ class HomeService
   public function getAfis()
   {
     $section1 = Affiliate::where('sectionFlg',1)->where('size','128')->get();
+    $count128 = $section1->count();
     $section2 = Affiliate::where('sectionFlg',1)->where('size','80')->get();
-    return [$section1,$section2];
+    $count80 = $section2->count();
+    return [$section1,$section2,$count128,$count80];
   }
 
 

@@ -162,7 +162,8 @@
 
   {{--  /serch cardata section  --}}
 
-
+    @include('layouts.loop_afi',['mainLoopPcUp' => $mainLoopPcUp,'mainLoopSpUp'=> $mainLoopSpUp ])
+    
   {{--  place name section  --}}
 
     @include('layouts.place_title',['title'=>$place.'ナンバー'])

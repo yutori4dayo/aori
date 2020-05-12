@@ -7,6 +7,8 @@ use App\Post;
 use App\Brand;
 use App\BodyType;
 use App\Prefectures;
+use App\Http\Services\HomeService;
+use App\Affiliate;
 
 class PrefecturesController extends Controller
 {
@@ -18,7 +20,10 @@ class PrefecturesController extends Controller
     }
     $Cardata = Post::where('Prefecture_city',$pre->name)->orderBy('created_at','desc')->simplePaginate(config('app.paginatecount'));
     $place = $pre->name;
-    return view('prefectures.pre1',compact('Cardata','prefectures','place'));
+
+    $HomeService = new HomeService();
+    list($mainLoopPcUp,$mainLoopSpUp,$count128,$count80) = $HomeService->getAfis();
+    return view('prefectures.pre1',compact('Cardata','prefectures','place','mainLoopPcUp','mainLoopSpUp','count128','count80'));
   }
 
   public function serchcardata(Request $request){

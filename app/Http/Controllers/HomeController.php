@@ -24,11 +24,11 @@ class HomeController extends Controller
       $prefectures = Prefectures::all();
       $Cardata = Post::orderBy('created_at', 'desc')->simplePaginate(config('app.paginatecount'));
       $HomeService = new HomeService();
-      list($mainLoopPcUp,$mainLoopSpUp) = $HomeService->getAfis();
+      list($mainLoopPcUp,$mainLoopSpUp,$count128,$count80) = $HomeService->getAfis();
       $getFirstPlaceAll = $HomeService->getFirstPlaceAll();
       $dt = Carbon::now();
       $dtNow = $dt->format('Y年m月d日 H時');
-      return view('index',compact('Cardata','prefectures','getFirstPlaceAll','dtNow','mainLoopPcUp','mainLoopSpUp'));
+      return view('index',compact('Cardata','prefectures','getFirstPlaceAll','dtNow','mainLoopPcUp','mainLoopSpUp','count128','count80'));
     }
 
     public function carimage(Request $request){

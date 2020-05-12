@@ -1,7 +1,7 @@
 @extends('layouts.head',['pretitle' => $place])
 <body>
 @include('layouts.nav')
-
+  @include('layouts.loop_afi',['mainLoopPcUp' => $mainLoopPcUp,'mainLoopSpUp'=> $mainLoopSpUp ])
   {{--  serch cardata section  --}}
 
     @include('layouts.serch_cardata',['title'=>$place])
