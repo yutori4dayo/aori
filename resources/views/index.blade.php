@@ -378,7 +378,22 @@
               </div>
             </div>
           </section>
-          @if($loop->iteration === 5)
+          @if($loop->iteration === 3)
+            @include('layouts.loop_afi',['mainLoopPcUp' => $mainLoopPcUp,'mainLoopSpUp'=> $mainLoopSpUp,'count128' => $count128,'count80'=>$count80])
+          @endif
+          @if($loop->iteration === 6)
+            @include('layouts.loop_afi',['mainLoopPcUp' => $mainLoopPcUp,'mainLoopSpUp'=> $mainLoopSpUp,'count128' => $count128,'count80'=>$count80])
+          @endif
+          @if($loop->iteration === 9)
+            @include('layouts.loop_afi',['mainLoopPcUp' => $mainLoopPcUp,'mainLoopSpUp'=> $mainLoopSpUp,'count128' => $count128,'count80'=>$count80])
+          @endif
+          @if($loop->iteration === 12)
+            @include('layouts.loop_afi',['mainLoopPcUp' => $mainLoopPcUp,'mainLoopSpUp'=> $mainLoopSpUp,'count128' => $count128,'count80'=>$count80])
+          @endif
+          @if($loop->iteration === 15)
+            @include('layouts.loop_afi',['mainLoopPcUp' => $mainLoopPcUp,'mainLoopSpUp'=> $mainLoopSpUp,'count128' => $count128,'count80'=>$count80])
+          @endif
+          @if($loop->iteration === 18)
             @include('layouts.loop_afi',['mainLoopPcUp' => $mainLoopPcUp,'mainLoopSpUp'=> $mainLoopSpUp,'count128' => $count128,'count80'=>$count80])
           @endif
           @endforeach
