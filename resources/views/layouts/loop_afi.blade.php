@@ -9,41 +9,57 @@
   <div class="loopAfiBox defultPC">
     @if(isset($mainLoopPcUp[$randomPcUp[8]]['url']))
       {!! $mainLoopPcUp[$randomPcUp[8]]['url'] !!}
+    @else
+      {!! $mainLoopPcUp[$randomPcUp[0]]['url'] !!}
     @endif
   </div>
   <div class="loopAfiBox defultPC">
     @if(isset($mainLoopPcUp[$randomPcUp[1]]['url']))
       {!! $mainLoopPcUp[$randomPcUp[1]]['url'] !!}
+      @else
+        {!! $mainLoopPcUp[$randomPcUp[0]]['url'] !!}
     @endif
   </div>
   <div class="loopAfiBox defultPC">
     @if(isset($mainLoopPcUp[$randomPcUp[2]]['url']))
       {!! $mainLoopPcUp[$randomPcUp[2]]['url'] !!}
+      @else
+        {!! $mainLoopPcUp[$randomPcUp[0]]['url'] !!}
     @endif
   </div>
   <div class="loopAfiBox defultPC">
     @if(isset($mainLoopPcUp[$randomPcUp[3]]['url']))
       {!! $mainLoopPcUp[$randomPcUp[3]]['url'] !!}
+      @else
+        {!! $mainLoopPcUp[$randomPcUp[0]]['url'] !!}
     @endif
   </div>
   <div class="loopAfiBox defultPC">
     @if(isset($mainLoopPcUp[$randomPcUp[4]]['url']))
       {!! $mainLoopPcUp[$randomPcUp[4]]['url'] !!}
+      @else
+        {!! $mainLoopPcUp[$randomPcUp[0]]['url'] !!}
     @endif
   </div>
   <div class="loopAfiBox defultPC">
     @if(isset($mainLoopPcUp[$randomPcUp[5]]['url']))
       {!! $mainLoopPcUp[$randomPcUp[5]]['url'] !!}
+      @else
+        {!! $mainLoopPcUp[$randomPcUp[0]]['url'] !!}
     @endif
   </div>
   <div class="loopAfiBox defultPC">
     @if(isset($mainLoopPcUp[$randomPcUp[6]]['url']))
       {!! $mainLoopPcUp[$randomPcUp[6]]['url'] !!}
+      @else
+        {!! $mainLoopPcUp[$randomPcUp[0]]['url'] !!}
     @endif
   </div>
   <div class="loopAfiBox defultPC sp_hidden">
     @if(isset($mainLoopPcUp[$randomPcUp[9]]['url']))
       {!! $mainLoopPcUp[$randomPcUp[9]]['url'] !!}
+      @else
+        {!! $mainLoopPcUp[$randomPcUp[0]]['url'] !!}
     @endif
   </div>
 
