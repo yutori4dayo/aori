@@ -29,7 +29,7 @@ class HomeController extends Controller
       $getFirstPlaceAll = $HomeService->getFirstPlaceAll();
       $dt = Carbon::now();
       $dtNow = $dt->format('Y年m月d日 H時');
-      return view('index',compact('Cardata','prefectures','getFirstPlaceAll','dtNow','mainLoopPcUp','mainLoopSpUp','count128','count80'));
+      return view('index',compact('Cardata','prefectures','getFirstPlaceAll','dtNow','mainLoopPcUp','mainLoopSpUp','count128','count80','allCountPost'));
     }
 
     public function carimage(Request $request){

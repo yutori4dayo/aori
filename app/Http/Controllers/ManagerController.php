@@ -29,6 +29,7 @@ class ManagerController extends Controller
 
     public function delete(Request $request){
       if($request->type === "1"){
+        //投稿削除
         $item = Post::find($request->id);
         $HomeService = new HomeService();
         $HomeService->decrementAllCount($item->Prefecture_city,$item->Bland,$item->bodytype,$item->Region);
@@ -37,6 +38,7 @@ class ManagerController extends Controller
         $banners = Affiliate::orderBy('created_at', 'desc')->simplePaginate(config('app.paginatecount'));
         return view('admin.home',compact('posts','banners'));
       }elseif($request->type === "2"){
+        //アフィリエイト削除
         Affiliate::where('id',$request->id)->delete();
         $posts = Post::orderBy('created_at', 'desc')->simplePaginate(config('app.paginatecount'));
         $banners = Affiliate::orderBy('created_at', 'desc')->simplePaginate(config('app.paginatecount'));

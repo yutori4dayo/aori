@@ -2,8 +2,8 @@
 
 <nav class="mb-0 mx-5 mt-5">
   <div class="nav nav-tabs" id="nav-tab" role="tablist">
-    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">ホーム</a>
-    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">プロフィール</a>
+    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">投稿一覧</a>
+    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">楽天バナー</a>
   </div>
 </nav>
 
@@ -59,7 +59,9 @@
 <div class="tab-pane" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
   <form class="" action="{{ action('ManagerController@afiliate')}}" method="post" name='hidden_post'>
     @csrf
-    <a href="javascript:hidden_post.submit()">リンク名</a>
+    <button type="button" class="btn btn-primary rounded-0">
+    <a href="javascript:hidden_post.submit()" class="text-light">新規作成</a>
+    </button>
   </form>
 
   <div class="container-fluid">

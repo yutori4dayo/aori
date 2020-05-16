@@ -18,8 +18,8 @@
               <div class="form-group">
                 <label for="exampleSelect1exampleFormControlSelect1">サイズ</label>
                 <select class="form-control" name="size" id="mySelect">
-                  <option value="128">128*128</option>
-                  <option value="80">80*80</option>
+                  <option value="128">128*128 パソコン</option>
+                  <option value="80">80*80 スマートフォン</option>
                 </select>
               </div>
             </div>
