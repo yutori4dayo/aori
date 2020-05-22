@@ -295,7 +295,7 @@
             </a></li>
           </ul>
         </div>
-        <div class="alert alert-light" role="alert"> - 投稿数 - <strong>@if(isset($allCountPost)){{$allCountPost}}@endif件</strong></div>
+        <div class="alert alert-light" role="alert"> - 総投稿数 - <strong>@if(isset($allCountPost)){{$allCountPost}}@endif件</strong></div>
         <div class="col-12">
           @foreach($Cardata as $item)
           <section class="Section_box">
