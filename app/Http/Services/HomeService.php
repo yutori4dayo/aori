@@ -139,6 +139,7 @@ class HomeService
               '#煽り運転 #危険運転'. PHP_EOL .
               'https://aoriunten.net/'
       ]);
+      
   }
 
 
