@@ -136,10 +136,10 @@ class HomeService
               $test->Region.' '.$test->Classification.' '.$test->Distinction.' '.$test->maskednumber. PHP_EOL .
               '「'.$test->text.'」'. PHP_EOL .
                 PHP_EOL .
-              '#煽り運転 #危険運転'. PHP_EOL .
+              '#煽り運転 #危険運転 #'.$test->Prefecture_city.' #'.$test->Region.'ナンバー'. PHP_EOL .
               'https://aoriunten.net/'
       ]);
-      
+
   }
 
 
