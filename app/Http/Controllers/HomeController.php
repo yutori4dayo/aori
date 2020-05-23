@@ -153,6 +153,8 @@ class HomeController extends Controller
       $post->user_ip = $_SERVER["REMOTE_ADDR"];
       $post->car_img = $request->session()->get('carimg');
         if($post->save()){
+          $HomeService = new HomeService();
+          $HomeService->postTwitter();
           $request->session()->flush();
           return redirect('/');
         }
