@@ -10,6 +10,7 @@ use App\Prefectures;
 use Carbon\Carbon;
 use App\Brand;
 use App\BodyType;
+use Abraham\TwitterOAuth\TwitterOAuth;
 use Intervention\Image\ImageManagerStatic as Image;
 
 class HomeService
@@ -122,6 +123,22 @@ class HomeService
     $section2 = Affiliate::where('sectionFlg',1)->where('size','80')->get();
     $count80 = $section2->count();
     return [$section1,$section2,$count128,$count80];
+  }
+
+  public function postTwitter()
+  {
+      $test = Post::orderBy('created_at','desc')->first();
+      $connection = new TwitterOAuth(env('CONSUMER_KEY'), env('COMSUMER_CEACRET_KEY'), env('ACCESS_TOKEN'), env('ACCESS_TOKEN_CEACRET'));
+      $request = $connection->post("statuses/update", [
+          "status" =>
+              '新しい煽り運転ナンバーが投稿されました。'. PHP_EOL .
+               PHP_EOL .
+              $test->Region.' '.$test->Classification.' '.$test->Distinction.' '.$test->maskednumber. PHP_EOL .
+              '「'.$test->text.'」'. PHP_EOL .
+                PHP_EOL .
+              '#煽り運転 #危険運転'. PHP_EOL .
+              'https://aoriunten.net/'
+      ]);
   }
 
 
