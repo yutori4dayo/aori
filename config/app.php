@@ -3,7 +3,8 @@
 return [
 
 
-
+    'email' => env('EMAIL'),
+    'password' => env('PASSWORD'),
     'paginatecount' =>  20,
 
     /*

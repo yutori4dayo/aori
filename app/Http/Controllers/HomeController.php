@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Affiliate;
 use App\Post;
 use App\Region;
 use App\News;
@@ -12,6 +13,7 @@ use Carbon\Carbon;
 use App\Brand;
 use App\BodyType;
 use App\Http\Services\HomeService;
+use App\Http\Services\PostService;
 use Illuminate\Support\Facades\Input;
 use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Support\Facades\Hash;
@@ -20,12 +22,14 @@ class HomeController extends Controller
 {
     public function index(){
       $prefectures = Prefectures::all();
-      $Cardata = Post::orderBy('created_at', 'desc')->simplePaginate(config('app.paginatecount'));
+      $Cardata = Post::orderBy('created_at', 'desc')->paginate(config('app.paginatecount'));
+      $allCountPost = Post::all()->count();
       $HomeService = new HomeService();
+      list($mainLoopPcUp,$mainLoopSpUp,$count128,$count80) = $HomeService->getAfis();
       $getFirstPlaceAll = $HomeService->getFirstPlaceAll();
       $dt = Carbon::now();
       $dtNow = $dt->format('Y年m月d日 H時');
-      return view('index',compact('Cardata','prefectures','getFirstPlaceAll','dtNow'));
+      return view('index',compact('Cardata','prefectures','getFirstPlaceAll','dtNow','mainLoopPcUp','mainLoopSpUp','count128','count80','allCountPost'));
     }
 
     public function carimage(Request $request){
@@ -97,6 +101,16 @@ class HomeController extends Controller
       $body_type = $request->bodytype;
       $text = $request->text;
 
+
+      // $PostService = new PostService();
+      // $data =  $PostService->continuousPostCheck($Mainnumber);
+      //
+      // if($data['someday'] !== null){
+      //   if($data['today'] === $data['someday']){
+      //     return redirect('/')->with('Regulation_message', '連投できません。');
+      //   }
+      // }
+
       $request->session()->put('delete_key',$request->delete_key);
       $request->session()->put('Region',$Region);
       $request->session()->put('Classification',$Classification);
@@ -139,6 +153,8 @@ class HomeController extends Controller
       $post->user_ip = $_SERVER["REMOTE_ADDR"];
       $post->car_img = $request->session()->get('carimg');
         if($post->save()){
+          $HomeService = new HomeService();
+          $HomeService->postTwitter();
           $request->session()->flush();
           return redirect('/');
         }

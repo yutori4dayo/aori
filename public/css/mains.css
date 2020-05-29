@@ -477,6 +477,13 @@ dt::before{
   padding-bottom: 5px;
 }
 
+.count::before{
+  content:'あと';
+}
+.count::after{
+  content:'文字';
+}
+
 .short{
   padding-right: 64px;
 }
@@ -484,12 +491,40 @@ dt::before{
   padding-right: 15px;
 }
 
+.copyright{
+  margin: 0 auto;
+}
+
+.accordion{
+  display: none;
+}
+
+#admin{
+  color: inherit;
+  cursor: default;
+}
+#admin:hover{
+  text-decoration: none!important
+}
+
+/* アフィリエイト */
+.table td{
+  vertical-align: baseline;
+}
+
+.loopAfiWrapper_pc{
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.loopAfiBox_tab{
+  display: none;
+}
+.loopAfiBox_SP{
+  display: none;
+}
+
 
 @media screen and (max-width:1200px) {
-/* .container{
-  padding-left: 0!important;
-  padding-right: 0!important;
-} */
 .right_p{
   padding-left: 5px;
 }
@@ -522,12 +557,31 @@ dt::before{
 .SizeChange{
   font-size: 15px!important;
 }
+.hiden1080{
+  display: none;
+}
 }
 
 @media screen and (max-width:990px) {
+  .defultPC{
+    display: none;
+  }
   .sp_hidden{
     display: none;
   }
+  .loopAfiBox_SP{
+    display: block;
+  }
+
+  .sp_hidden_super{
+    margin-right: 0!important;
+    display: none;
+  }
+
+  .accordion{
+    display: block;
+  }
+
   .latestPostData{
     display: block;
   }
@@ -547,6 +601,9 @@ dt::before{
   }
 .bigimage{
   width: 90%;
+}
+.loopAfiBox_tab{
+  display: block;
 }
 }
 

@@ -1,4 +1,4 @@
-@extends('layouts.head')
+@extends('layouts.head',['regionname'=>$place.'ナンバー'])
 <body>
 @include('layouts.nav')
 
@@ -9,7 +9,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">{{$place.'ナンバー'}}：危険運転ナンバー検索</h5>
+          <h5 class="modal-title" id="staticBackdropLabel">{{$place.'ナンバー'}}：あおり運転ナンバー検索</h5>
         </div>
         <div class="modal-body">
           <div class="container">
@@ -162,7 +162,8 @@
 
   {{--  /serch cardata section  --}}
 
-
+    @include('layouts.loop_afi',['mainLoopPcUp' => $mainLoopPcUp,'mainLoopSpUp'=> $mainLoopSpUp ])
+    
   {{--  place name section  --}}
 
     @include('layouts.place_title',['title'=>$place.'ナンバー'])

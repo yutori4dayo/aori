@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Affiliate;
 use App\Region;
 use App\Prefectures;
 use App\Post;
+use App\Http\Services\HomeService;
 
 class RegionListController extends Controller
 {
@@ -22,8 +24,11 @@ class RegionListController extends Controller
       foreach ($preid as $pre) {
         $pre->name;
       }
-      $Cardata = Post::where('Region',$pre->name)->orderBy('created_at','desc')->simplePaginate(config('app.paginatecount'));
+      $Cardata = Post::where('Region',$pre->name)->orderBy('created_at','desc')->paginate(config('app.paginatecount'));
       $place = $pre->name;
-      return view('regions.region',compact('Cardata','place'));
+
+      $HomeService = new HomeService();
+      list($mainLoopPcUp,$mainLoopSpUp,$count128,$count80) = $HomeService->getAfis();
+      return view('regions.region',compact('Cardata','place','mainLoopPcUp','mainLoopSpUp','count128','count80'));
     }
 }

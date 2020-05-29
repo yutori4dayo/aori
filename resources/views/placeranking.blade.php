@@ -1,4 +1,4 @@
-@include('layouts.head')
+@include('layouts.head',['煽り運転ランキング' => $ranking])
 <body>
 @include('layouts.nav')
 <ul id="myTab" class="nav nav-tabs RankingTab" role="tablist">

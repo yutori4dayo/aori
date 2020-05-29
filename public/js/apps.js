@@ -1,6 +1,18 @@
 $(document).ready(function() {
   $("#mySelect2").select2();
 });
+$(document).ready(function() {
+  $("#mySelect").select2();
+});
+$(document).ready(function() {
+  $("#mySelect1").select2();
+});
+$(document).ready(function() {
+  $("#mySelect3").select2();
+});
+$(document).ready(function() {
+  $("#mySelect4").select2();
+});
 
 function previewFile() {
   const preview = document.querySelector('#target');
@@ -19,5 +31,23 @@ function previewFile() {
 $(function () {
     $('#showbtn').on('click', () => {
         $('#delete_key').show();
+    });
+});
+
+$(function(){
+    var countMax = 100;
+    $('textarea').bind('keydown keyup keypress change',function(){
+        var thisValueLength = $(this).val().length;
+        var countDown = (countMax)-(thisValueLength);
+        $('.count').html(countDown);
+
+        if(countDown < 0){
+            $('.count').css({color:'#ff0000',fontWeight:'bold'});
+        } else {
+            $('.count').css({color:'#fffff',fontWeight:'normal'});
+        }
+    });
+    $(window).load(function(){
+        $('.count').html(countMax);
     });
 });

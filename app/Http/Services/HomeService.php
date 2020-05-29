@@ -3,12 +3,14 @@
 namespace App\Http\Services;
 
 use App\Post;
+use App\Affiliate;
 use App\Region;
 use App\News;
 use App\Prefectures;
 use Carbon\Carbon;
 use App\Brand;
 use App\BodyType;
+use Abraham\TwitterOAuth\TwitterOAuth;
 use Intervention\Image\ImageManagerStatic as Image;
 
 class HomeService
@@ -112,6 +114,32 @@ class HomeService
       $tests = substr_replace($val,' ',-3,0);
       return '• '.'• '.' •'.$tests;
     }
+  }
+
+  public function getAfis()
+  {
+    $section1 = Affiliate::where('sectionFlg',1)->where('size','128')->get();
+    $count128 = $section1->count();
+    $section2 = Affiliate::where('sectionFlg',1)->where('size','80')->get();
+    $count80 = $section2->count();
+    return [$section1,$section2,$count128,$count80];
+  }
+
+  public function postTwitter()
+  {
+      $test = Post::orderBy('created_at','desc')->first();
+      $connection = new TwitterOAuth(env('CONSUMER_KEY'), env('COMSUMER_CEACRET_KEY'), env('ACCESS_TOKEN'), env('ACCESS_TOKEN_CEACRET'));
+      $request = $connection->post("statuses/update", [
+          "status" =>
+              '新しい煽り運転ナンバーが投稿されました。'. PHP_EOL .
+               PHP_EOL .
+              $test->Region.' '.$test->Classification.' '.$test->Distinction.' '.$test->maskednumber. PHP_EOL .
+              '「'.$test->text.'」'. PHP_EOL .
+                PHP_EOL .
+              '#煽り運転 #危険運転 #'.$test->Prefecture_city.' #'.$test->Region.'ナンバー'. PHP_EOL .
+              'https://aoriunten.net/'
+      ]);
+
   }
 
 

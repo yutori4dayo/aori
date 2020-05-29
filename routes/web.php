@@ -11,19 +11,6 @@
 |
 */
 
-// Route::get('/index', 'HomeController@index');
-//
-// Route::get('/post', function () {
-//     return view('post');
-// });
-//
-//
-// Route::post('/check', 'HomeController@check');
-//
-// Route::post('/data', 'HomeController@data');
-//
-// Route::post('/add', 'HomeController@add');
-
 Route::get('/prefectures/{id}', 'PrefecturesController@pre0');
 Route::get('/', 'HomeController@index');
 
@@ -36,12 +23,11 @@ Route::get('/check', function(){
 });
 
 Route::post('/check', 'HomeController@add');
-// Route::get('/{image}', 'HomeController@carimage');
+
 Route::get('/image/{image}', 'HomeController@carimage');
 
 
 Route::post('/data', 'HomeController@data');
-
 Route::post('/add', 'HomeController@add');
 
 Route::get('/regionlist', 'RegionListController@regionList');
@@ -61,3 +47,14 @@ Route::post('/serchcardata4', 'PrefecturesController@serchcardata4');
 
 Route::get('/allsearch', 'PrefecturesController@serchcardataall');
 Route::post('/all', 'PrefecturesController@allsearchs');
+
+Route::get('/login', 'ManagerController@login');
+Route::get('/check', 'ManagerController@check');
+Route::get('/delete/{id}', 'ManagerController@delete');
+Route::post('/afi', 'ManagerController@afi');
+Route::post('/afiliate', 'ManagerController@afiliate');
+
+
+// Auth::routes();
+//
+// Route::get('/', 'HomeController@index');

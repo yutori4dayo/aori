@@ -10,7 +10,7 @@
       <div class="col-12 pb-2">
         <div class="region_post">
           <div class="serch_box1">
-            <label for="exampleSelect1exampleFormControlSelect1">危険運転発生場所</label>
+            <label for="exampleSelect1exampleFormControlSelect1">あおり運転発生場所</label>
           </div>
           <div class="serch_box2 pl-1">
             <select class="form-control" name="Prefecture_city" id="exampleFormControlSelect1">
