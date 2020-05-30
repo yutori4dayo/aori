@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use Abraham\TwitterOAuth\TwitterOAuth;
 
 class SampleCommand extends Command
 {
