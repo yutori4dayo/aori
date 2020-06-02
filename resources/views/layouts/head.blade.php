@@ -19,6 +19,7 @@
     <meta name="description" content="各都道府県で発生した危険運転を投稿して共有できます。投稿された地域ナンバーやボディタイプ等でランキングも集計しています。">
     @endif
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script data-ad-client="ca-pub-6442962962097241" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- twiiter -->
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:site" content="@samuraiinu2"/>

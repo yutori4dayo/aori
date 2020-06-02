@@ -36,10 +36,10 @@ class SampleCommand extends Command
      *
      * @return mixed
      */
-    public function handle()
+    public static function handle()
     {
       $connection = new TwitterOAuth(env('CONSUMER_KEY'), env('COMSUMER_CEACRET_KEY'), env('ACCESS_TOKEN'), env('ACCESS_TOKEN_CEACRET'));
-      $gets = $connection->get("search/tweets",["q" => "煽り運転",'count'=>10,"result_type"=>"recent","include_entities"=>false]);
+      $gets = $connection->get("search/tweets",["q" => "煽り運転",'count'=>20,"result_type"=>"recent","include_entities"=>false]);
         for ($i=0; $i <20 ; $i++) {
           $connection->post("favorites/create",["id" => $gets->statuses[$i]->id]);
         }
