@@ -129,17 +129,17 @@ class HomeService
   public function postTwitter()
   {
       $test = Post::orderBy('created_at','desc')->first();
-      // $connection = new TwitterOAuth(env('CONSUMER_KEY'), env('COMSUMER_CEACRET_KEY'), env('ACCESS_TOKEN'), env('ACCESS_TOKEN_CEACRET'));
-      // $request = $connection->post("statuses/update", [
-      //     "status" =>
-      //         '新しい煽り運転ナンバーが投稿されました。'. PHP_EOL .
-      //          PHP_EOL .
-      //         $test->Region.' '.$test->Classification.' '.$test->Distinction.' '.$test->maskednumber. PHP_EOL .
-      //         '「'.$test->text.'」'. PHP_EOL .
-      //           PHP_EOL .
-      //         '#煽り運転 #危険運転 #'.$test->Prefecture_city.' #'.$test->Region.'ナンバー'. PHP_EOL .
-      //         'https://aoriunten.net/'
-      // ]);
+      $connection = new TwitterOAuth(env('CONSUMER_KEY'), env('COMSUMER_CEACRET_KEY'), env('ACCESS_TOKEN'), env('ACCESS_TOKEN_CEACRET'));
+      $request = $connection->post("statuses/update", [
+          "status" =>
+              '新しい煽り運転ナンバーが投稿されました。'. PHP_EOL .
+               PHP_EOL .
+              $test->Region.' '.$test->Classification.' '.$test->Distinction.' '.$test->maskednumber. PHP_EOL .
+              '「'.$test->text.'」'. PHP_EOL .
+                PHP_EOL .
+              '#煽り運転 #危険運転 #'.$test->Prefecture_city.' #'.$test->Region.'ナンバー'. PHP_EOL .
+              'https://aoriunten.net/'
+      ]);
       \Mail::to('oonlookerss@i.softbank.jp')->send( new SampleMail($test) );
   }
 

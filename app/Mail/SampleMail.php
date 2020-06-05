@@ -30,7 +30,7 @@ class SampleMail extends Mailable
     public function build()
     {
       return $this->view('mail')
-                  ->from('yutori3dayo@gmail.com')
+                  ->from({{env('MAIL_USERNAME')}})
                   ->subject('煽り運転ナンバー新規投稿')
                   ->with([
                       'region' => $this->data['Region'],
