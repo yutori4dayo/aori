@@ -22,7 +22,7 @@ class HomeController extends Controller
 {
     public function index(){
       $prefectures = Prefectures::all();
-      $Cardata = Post::orderBy('created_at', 'desc')->paginate(config('app.paginatecount'));
+      $Cardata = Post::orderBy('created_at', 'desc')->simplePaginate(config('app.paginatecount'));
       $allCountPost = Post::all()->count();
       $HomeService = new HomeService();
       list($mainLoopPcUp,$mainLoopSpUp,$count128,$count80) = $HomeService->getAfis();

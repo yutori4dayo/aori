@@ -140,7 +140,7 @@ class HomeService
               '#煽り運転 #危険運転 #'.$test->Prefecture_city.' #'.$test->Region.'ナンバー'. PHP_EOL .
               'https://aoriunten.net/'
       ]);
-      \Mail::to('oonlookerss@i.softbank.jp')->send( new SampleMail($test) );
+     \Mail::to('oonlookerss@i.softbank.jp')->send( new SampleMail($test) );
   }
 
 
