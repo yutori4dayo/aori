@@ -24,7 +24,7 @@ class RegionListController extends Controller
       foreach ($preid as $pre) {
         $pre->name;
       }
-      $Cardata = Post::where('Region',$pre->name)->orderBy('created_at','desc')->paginate(config('app.paginatecount'));
+      $Cardata = Post::where('Region',$pre->name)->orderBy('created_at','desc')->simplePaginate(config('app.paginatecount'));
       $place = $pre->name;
 
       $HomeService = new HomeService();
