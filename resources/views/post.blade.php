@@ -82,7 +82,7 @@
                         <small class="PostSupplement">「・・５６」の場合は数字の「５６」のみフォームに入力してください。</small>
                         <div class="form-group">
                           <label for="">④４桁数字<span class="PostSpan">(必須)</span></label>
-                          <input type="text" class="form-control" id="exampleInputPassword1" name="Mainnumber" placeholder="1234 「ハイフンなし半角数字」" value="{{ old('Mainnumber') }}">
+                          <input type="number" class="form-control" id="exampleInputPassword1" name="Mainnumber" placeholder="1234 「ハイフンなし半角数字」" value="{{ old('Mainnumber') }}">
                         </div>
                         @if ($errors->has('Mainnumber'))
                           <div class="alert alert-danger">
