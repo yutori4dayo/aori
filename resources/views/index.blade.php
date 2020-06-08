@@ -13,7 +13,7 @@
         </button>
       </div>
     @endif
-    @if (session('Regulation_message'))
+    <!-- @if (session('Regulation_message'))
       <div class="alert alert-success alert-dismissible fade show" role="alert">
         <div class="flash_message text-danger">
             {{ session('Regulation_message') }}
@@ -22,7 +22,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-    @endif
+    @endif -->
 
     <div class="container pt-3">
       <div class="row">
@@ -405,5 +405,8 @@
         </div>
       </div>
     </div>
+<script type="text/javascript">
+  $('.alert').fadeOut(3000);
+</script>
     <!-- /latestPostData -->
 @include('layouts.footer')
