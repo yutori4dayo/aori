@@ -39,10 +39,9 @@ class FrendsipCommand extends Command
     public function handle()
     {
       $connection = new TwitterOAuth(env('CONSUMER_KEY'), env('COMSUMER_CEACRET_KEY'), env('ACCESS_TOKEN'), env('ACCESS_TOKEN_CEACRET'));
-      $result = $connection->get("followers/ids", ["screen_name" =>'@hikakin',"count"=>500]);
+      $result = $connection->get("followers/ids", ["screen_name" =>'@NumberData',"count"=>500]);
       for ($i=0; $i <50 ; $i++) {
          $get = $connection->post("friendships/create", ["user_id" => $result->ids[$i]]);
       }
-      dd($get);
     }
 }
