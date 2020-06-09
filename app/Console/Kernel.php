@@ -27,8 +27,8 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
       $schedule->command('command:name')->twiceDaily(12, 21);
-      $schedule->command('get:news')->betweent('6:00','22:00')->hourly();
-      $schedule->command('post:newsmkla')->betweent('6:00','22:00')->hourlyAt(17);
+      $schedule->command('get:news')->between('6:00','22:00')->hourly();
+      $schedule->command('post:newsmkla')->between('6:00','22:00')->hourlyAt(17);
     }
 
     /**
