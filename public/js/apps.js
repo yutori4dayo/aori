@@ -51,3 +51,10 @@ $(function(){
         $('.count').html(countMax);
     });
 });
+
+$(function(){
+
+    // フラッシュメッセージのfadeout
+        $('.alert').fadeOut(3000);
+
+})();

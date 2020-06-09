@@ -5,18 +5,8 @@
 
     @if (session('flash_message'))
       <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <div class="flash_message text-danger">
+        <div class="flash_message text-black">
             {{ session('flash_message') }}
-        </div>
-        <button type="button" class="close" data-dismiss="alert" aria-label="閉じる">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-    @endif
-    @if (session('Regulation_message'))
-      <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <div class="flash_message text-danger">
-            {{ session('Regulation_message') }}
         </div>
         <button type="button" class="close" data-dismiss="alert" aria-label="閉じる">
           <span aria-hidden="true">&times;</span>
@@ -113,7 +103,7 @@
                 <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 41)  }}">佐賀</a></dd>
                 <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 43)  }}">熊本</a></dd>
                 <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 42)  }}">長崎</a></dd>
-                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 45)  }}">宮城</a></dd>
+                <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 45)  }}">宮崎</a></dd>
                 <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 46)  }}">鹿児島</a></dd>
                 <dd class="sp_hidden"><a href="{{ action('PrefecturesController@pre0', 47)  }}">沖縄</a></dd>
               </dl>
@@ -261,7 +251,7 @@
                   <dd class=""><a href="{{ action('PrefecturesController@pre0', 41)  }}">佐賀</a></dd>
                   <dd class=""><a href="{{ action('PrefecturesController@pre0', 43)  }}">熊本</a></dd>
                   <dd class=""><a href="{{ action('PrefecturesController@pre0', 42)  }}">長崎</a></dd>
-                  <dd class=""><a href="{{ action('PrefecturesController@pre0', 45)  }}">宮城</a></dd>
+                  <dd class=""><a href="{{ action('PrefecturesController@pre0', 45)  }}">宮崎</a></dd>
                   <dd class=""><a href="{{ action('PrefecturesController@pre0', 46)  }}">鹿児島</a></dd>
                   <dd class=""><a href="{{ action('PrefecturesController@pre0', 47)  }}">沖縄</a></dd>
                 </div>
@@ -405,5 +395,8 @@
         </div>
       </div>
     </div>
+<script type="text/javascript">
+  $('.alert').fadeOut(3000);
+</script>
     <!-- /latestPostData -->
 @include('layouts.footer')
