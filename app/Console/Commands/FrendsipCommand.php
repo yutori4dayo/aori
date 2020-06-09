@@ -43,6 +43,5 @@ class FrendsipCommand extends Command
       for ($i=0; $i <50 ; $i++) {
          $get = $connection->post("friendships/create", ["user_id" => $result->ids[$i]]);
       }
-      dd($get);
     }
 }

@@ -156,7 +156,7 @@ class HomeController extends Controller
           $HomeService = new HomeService();
           $HomeService->postTwitter();
           $request->session()->flush();
-          return redirect('/')->with('flash_message', '投稿が完了しました');
+          return redirect('/')->with('flash_message', '投稿完了しました。ありがとうございました。');
         }
     }
 }
